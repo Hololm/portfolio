@@ -15,11 +15,10 @@ const goToAbout = () => {
       <h1 class="name">Joseph Holm</h1>
       <div class="title">Full-Stack Developer at ASU</div>
       <p class="description">
-        I have completed 4 Software Engineering Internships, worked as a CS Teaching Assistant for 2 years,
-        trained ML models as a Research Assistant, made hundreds of ASU's websites as a Web Developer,
-        and worked two years as a Residential Assistant (RA).
+        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
         <br><br>
-        Feel free to poke around this site. I spent a lot of time making it look pretty :)
+        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
       </p>
     </div>
     <div class="photo-container">
