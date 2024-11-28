@@ -16,10 +16,11 @@
         In my spare time when I'm not coding,
         you'll find me reading books or playing badminton and volleyball.
       </p>
+      <button class="resume-button">Check out my resume!</button>
     </div>
     <div class="photo-container">
       <div class="placeholder-photo">
-        <img src="/assets/me.jpg" alt="Photo"/>
+        <img src="/assets/me2.jpg" alt="Photo"/>
       </div>
     </div>
   </div>
@@ -169,5 +170,23 @@
   opacity: 0.92;
   max-width: 650px;
   font-family: "Gilroy Regular", serif;
+}
+
+.resume-button {
+  font-family: 'Gilroy Medium', serif;
+  border-radius: 4px;
+  color: white;
+  font-size: 20px;
+  background: transparent;
+  border: 2px solid white;
+  padding: 16px 24px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.resume-button:hover {
+  cursor: pointer;
+  transform: scale(1.01);
 }
 </style>

@@ -20,11 +20,11 @@ import HomeView from "@/views/HomeView.vue"
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+    background: rgb(49, 55, 69);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(94, 103, 122);
+    background-color: rgb(109, 119, 140);
   border-radius: 5px;
 }
 

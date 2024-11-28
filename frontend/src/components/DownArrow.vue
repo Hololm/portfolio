@@ -17,12 +17,13 @@
 .scroll-arrow-container {
   display: flex;
   justify-content: center;
-  margin-top: 0;
+  margin-top: -50px;
+  padding-bottom: 60px;
 }
 
 .scroll-arrow {
-  width: 40px;  /* Match SVG width */
-  height: 40px; /* Match SVG height */
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 
@@ -48,5 +49,10 @@
 
 .scroll-arrow:hover .arrow {
   stroke: rgba(255,255,255,1);
+}
+@media (max-width: 768px) {
+  .scroll-arrow {
+    display: none;
+  }
 }
 </style>

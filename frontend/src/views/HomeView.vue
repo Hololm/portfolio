@@ -2,6 +2,7 @@
 import { useRouter } from 'vue-router'
 import IntroSection from "@/components/IntroSection.vue"
 import DownArrow from '@/components/DownArrow.vue'
+import ExperienceSection from '@/components/ExperienceSection.vue'
 
 const router = useRouter()
 
@@ -13,6 +14,7 @@ const goToAbout = () => {
 <template>
   <IntroSection />
   <DownArrow />
+  <ExperienceSection />
 </template>
 
 <style scoped>
