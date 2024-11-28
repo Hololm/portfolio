@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Gilroy Bold';
+  src: url('@/components/fonts/gilroy-bold.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy Regular';
+  src: url('@/components/fonts/gilroy-regular.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy Medium';
+  src: url('@/components/fonts/gilroy-medium.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  background: linear-gradient(135deg, #0b1119 0%, #212c40 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
