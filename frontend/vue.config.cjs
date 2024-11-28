@@ -1,7 +1,8 @@
 module.exports = {
   configureWebpack: {
-    entry: './src/main.ts',
-    publicPath: '/',
+    output: {
+      publicPath: '/'
+    },
     resolve: {
       extensions: ['.ts', '.js', '.vue', '.json']
     }
