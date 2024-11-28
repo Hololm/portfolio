@@ -5,14 +5,16 @@
 <template>
 <div class="layout-container">
     <div class="intro-container">
-      <div class="greeting">Hi, I'm</div>
-      <h1 class="name">Joseph Holm</h1>
+      <div class="greeting">Hi, my name is</div>
+      <h1 class="name">Joseph Holm.</h1>
       <div class="title">Full-Stack Developer at ASU</div>
       <p class="description">
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+        I'm a sophomore at ASU pursuing a degree in Computer Science.
+        I'm passionate about building impactful, innovative software
+        and I'm always down for a good hackathon.
         <br><br>
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+        In my spare time when I'm not coding,
+        you'll find me reading books or playing badminton and volleyball.
       </p>
     </div>
     <div class="photo-container">
@@ -31,7 +33,12 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  min-height: 100vh;
+  min-height: 80vh;
+}
+
+.intro-container {
+  border-left: 4px solid rgba(127, 159, 220, 0.3);
+  padding-left: 30px;
 }
 
 @media (max-width: 768px) {
@@ -50,6 +57,7 @@
     padding-right: 0;
     margin-top: 2rem;
     text-align: center;
+     position: relative; /* Add this */
   }
 
   .description {
@@ -57,8 +65,25 @@
   }
 
   .photo-container {
-    margin-bottom: 2rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
   }
+
+  .placeholder-photo {
+    width: 300px;
+    height: 300px;
+  }
+
+  .placeholder-photo::after {
+    width: 100%;
+    height: 100%;
+    left: -15px;
+    bottom: -15px;
+  }
+
 
   .placeholder-photo img {
     width: 300px;
@@ -81,12 +106,15 @@
 .placeholder-photo {
   position: relative;
   z-index: 2;
-  width: 400px;
+  width: 450px;
+  height: 450px; /* Add fixed height equal to width */
+  aspect-ratio: 1; /* Ensure square shape */
 }
 
 .placeholder-photo img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 50%;
   position: relative;
 }
@@ -101,20 +129,22 @@
   left: 20px;
   bottom: -10px;
   z-index: -1;
+  aspect-ratio: 1; /* Ensure square shape */
 }
 
 .greeting {
-  font-size: 32px;
-  color: #ffffff;
-  opacity: 0.9;
-  margin-bottom: 8px;
-  font-family: "Gilroy Medium", serif;
+  font-size: 28px;
+  background: linear-gradient(to right, #88ABEC 0%, #3158CF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
+  font-family: "Gilroy Regular", serif;
 }
 
 .name {
-  font-size: 72px;
+  font-size: 96px;
   font-weight: bold;
-  color: #ffffff;
+  color: #eaecef;
   margin: 0;
   line-height: 1.1;
   letter-spacing: -2px;
@@ -122,19 +152,21 @@
 }
 
 .title {
-  font-size: 24px;
-  color: #ffffff;
-  opacity: 0.8;
+  font-size: 36px;
+  background: linear-gradient(to right, #88ABEC 0%, #3158CF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
   margin-top: 8px;
   margin-bottom: 32px;
   font-family: "Gilroy Medium", serif;
 }
 
 .description {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
-  color: #ffffff;
-  opacity: 0.7;
+  color: #f8f8fa;
+  opacity: 0.92;
   max-width: 650px;
   font-family: "Gilroy Regular", serif;
 }
