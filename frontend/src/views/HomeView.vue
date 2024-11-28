@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import IntroSection from "@/components/IntroSection.vue"
+import DownArrow from '@/components/DownArrow.vue'
 
 const router = useRouter()
 
@@ -10,7 +11,8 @@ const goToAbout = () => {
 </script>
 
 <template>
-  <IntroSection/>
+  <IntroSection />
+  <DownArrow />
 </template>
 
 <style scoped>
