@@ -12,16 +12,24 @@ interface Props {
   reverse?: boolean;
   githubLink?: string;
   devpostLink?: string;
+  gradientStart?: string; // Add these two new props
+  gradientEnd?: string;
 }
 
-defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+  gradientStart: 'rgba(255, 255, 255, 0.1)', // Default values
+  gradientEnd: 'rgba(255, 255, 255, 0.1)'
+});
 </script>
 
 <template>
   <div class="project-row" :class="{ reverse }">
     <div class="project-content">
       <h3 class="project-title">{{ title }}</h3>
-      <div class="project-description">
+            <div class="project-description"
+           :style="{
+             background: `linear-gradient(to right, ${gradientStart}, ${gradientEnd})`
+           }">
         <p v-for="(paragraph, index) in description" :key="index">
           {{ paragraph }}
         </p>
@@ -64,11 +72,18 @@ defineProps<Props>();
 .project-tech-container {
   display: flex;
   align-items: center;
-  gap: 4rem;
+  justify-content: space-between;
+  width: 100%;
 }
+
 
 .project-tech-container.reverse {
   flex-direction: row-reverse;
+}
+
+.project-tech-container.reverse .project-social-icons {
+  margin-left: 0; /* Reset right margin when reversed */
+  margin-right: auto; /* Push to left when reversed */
 }
 
 .project-tech {
@@ -84,6 +99,7 @@ defineProps<Props>();
   display: flex;
   gap: 1rem;
   align-items: center;
+  margin-left: auto; /* Default: push to right */
 }
 
 .social-icon {
@@ -103,7 +119,9 @@ defineProps<Props>();
 }
 
 .project-tech span {
-  color: #88ABEC;
+  background: linear-gradient(to right, #88ABEC 0%, #78a3ef 100%);
+  -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
   font-size: 14px;
   font-family: "Gilroy Medium", serif;
 }
@@ -114,7 +132,7 @@ defineProps<Props>();
 }
 
 .project-title {
-  font-size: 28px;
+  font-size: 36px;
   color: #eaecef;
   margin-bottom: 1rem;
   font-family: "Gilroy Bold", serif;
@@ -155,18 +173,22 @@ defineProps<Props>();
     text-align: center;
   }
 
-  .project-tech-container {
-    flex-direction: column;
-    align-items: center;
-  }
+.project-tech-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
 
   .project-tech {
     justify-content: center;
   }
 
-  .project-social-icons {
-    justify-content: center;
-    margin-top: 1rem;
-  }
+.project-social-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: auto; /* Default: push to right */
+}
 }
 </style>
