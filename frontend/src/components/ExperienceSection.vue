@@ -72,8 +72,7 @@
   padding-bottom: 60px;
   align-items: center;
   display: flex;
-  justify-content: left;
-  padding-left: 120px;
+  justify-content: center;
   font-family: 'Gilroy Bold', serif;
   font-size: 64px;
   color: white;
