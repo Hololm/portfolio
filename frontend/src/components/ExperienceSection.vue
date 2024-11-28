@@ -83,7 +83,7 @@
   justify-content: center;
   font-family: 'Gilroy Bold', serif;
   font-size: 64px;
-  color: white;
+  color: #eaecef;
 }
 
 .experience-container {
