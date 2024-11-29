@@ -27,8 +27,6 @@ const goToBlog = () => {
         you'll find me reading books, watching movies or TV shows, or playing badminton and volleyball.
       </p>
       <button @click="openResume" class="resume-button">Check out my resume!</button>
-      <span class="button-separator">or...</span>
-      <button @click="goToBlog" class="blog-button">Check out my blog!</button>
     </div>
     <div class="photo-container">
       <div class="placeholder-photo">
