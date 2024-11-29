@@ -7,12 +7,35 @@ import HomeView from "@/views/HomeView.vue"
 
 <template>
   <div>
-    <NavBar />
-    <HomeView />
+    <Transition name="fade" appear>
+      <NavBar />
+    </Transition>
+    <Transition name="slide-fade" appear>
+      <RouterView />
+    </Transition>
   </div>
 </template>
 
 <style>
+/* Fade animation for navbar */
+.fade-enter-active {
+  transition: opacity 0.6s ease;
+}
+
+.fade-enter-from {
+  opacity: 0;
+}
+
+/* Slide and fade animation for main content */
+.slide-fade-enter-active {
+  transition: all 0.8s ease-out;
+}
+
+.slide-fade-enter-from {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
 ::-webkit-scrollbar {
     display: block;
     width: 5px;

@@ -49,7 +49,7 @@
     </div>
     <div class="tech-card"
          :style="{
-             background: `linear-gradient(to right, rgba(91, 18, 238, 0.8), rgba(111, 36, 243, 0.8))`
+             background: `linear-gradient(to right, rgba(59, 130, 246, 0.8), rgba(37, 99, 235, 0.8))`
            }">
       <p class="tech-header">Frameworks & Libraries</p>
       <div class="tech-content">
@@ -93,11 +93,15 @@
     </div>
     <div class="tech-card"
          :style="{
-             background: `linear-gradient(to right, rgba(255, 149, 0, 0.8), rgba(255, 123, 0, 0.8))`
-           }">
+         background: `linear-gradient(to right, rgba(91, 18, 238, 0.8), rgba(111, 36, 243, 0.8))`
+                       }">
       <p class="tech-header">Cloud & Infrastructure</p>
       <div class="tech-content">
         <div class="tech-column">
+          <div class="tech-item">
+            <img src="/assets/mongodb.svg" alt="MongoDB" class="tech-icon"/>
+            <span>NoSQL</span>
+          </div>
           <div class="tech-item">
             <img src="/assets/selenium.svg" alt="AWS" class="tech-icon"/>
             <span>Selenium</span>
@@ -110,10 +114,7 @@
             <img src="/assets/docker.svg" alt="Docker" class="tech-icon"/>
             <span>Docker</span>
           </div>
-          <div class="tech-item">
-            <img src="/assets/mongodb.svg" alt="MongoDB" class="tech-icon"/>
-            <span>NoSQL</span>
-          </div>
+
         </div>
         <div class="tech-column">
           <div class="tech-item">
@@ -140,12 +141,13 @@
 
 <style scoped>
 .tech-title {
+  padding-top: 60px;
   padding-bottom: 60px;
   align-items: center;
   display: flex;
   justify-content: center;
   font-family: 'Gilroy Bold', serif;
-  font-size: 64px;
+  font-size: 38px;
   color: #eaecef;
 }
 

@@ -71,7 +71,7 @@ import JobCard from './JobCard.vue'
   display: flex;
   justify-content: center;
   font-family: 'Gilroy Bold', serif;
-  font-size: 64px;
+  font-size: 38px;
   color: #eaecef;
 }
 

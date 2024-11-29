@@ -109,13 +109,16 @@ defineProps<{
   color: #dae0e8;
 }
 
-.bullet-point::before {
-  content: '>';
+.bullet-point::after {
+  content: '';
   position: absolute;
-  left: 0;
-  color: #88ABEC;
-  font-family: 'Gilroy Medium', serif;
-  font-size: 1.2rem;
+  left: 6px;
+  top: 25%;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #88ABEC;
+  border-right: 2px solid #88ABEC;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .bullet-content {

@@ -96,6 +96,10 @@ const openResume = () => {
   .name {
     font-size: 48px;
   }
+
+  .resume-button {
+    margin-top: 20px;
+  }
 }
 
 .photo-container {
