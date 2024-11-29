@@ -1,13 +1,20 @@
 <script setup lang="ts">
+const openResume = () => {
+  window.open('/Joseph_Holm_Resume.pdf', '_blank');
+}
+
+const sendContact = () => {
+  window.location.href = 'mailto:joseph.holm27@gmail.com'
+}
 </script>
 
 <template>
   <nav class="navbar">
     <div class="left-group">
-      <button class="icon-button" title="Contact">
+      <button @click="sendContact" class="icon-button" title="Contact">
         <i class="icon email-icon"></i>
       </button>
-      <button class="icon-button" title="Resume">
+      <button @click="openResume" class="icon-button" title="Resume">
         <i class="icon resume-icon"></i>
       </button>
     </div>

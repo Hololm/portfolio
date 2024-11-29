@@ -18,7 +18,8 @@ defineProps<{
           <img :src="logo" :alt="company" class="logo-icon"/>
         </div>
         <div class="job-info">
-          <div class="job-title">{{ role}} @ {{ company }}</div>
+          <div class="job-title">{{ company}}</div>
+          <div class="job-company">{{ role }}</div>
           <div class="job-duration">{{ startDate }} - {{ endDate }}</div>
           <div class="job-location">{{ location }}</div>
         </div>
@@ -46,6 +47,14 @@ defineProps<{
   display: flex;
   align-items: flex-start;
   gap: 1rem;
+}
+
+.job-company {
+  background: linear-gradient(to right, #88ABEC 0%, #5087ea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Gilroy Medium', serif;
+  font-size: 1.1rem
 }
 
 .logo-background {
@@ -76,8 +85,8 @@ defineProps<{
 
 .job-title {
   color: #eaecef;
-  font-family: 'Gilroy Medium', serif;
-  font-size: 1.5rem;
+  font-family: 'Gilroy Bold', serif;
+  font-size: 1.4rem;
 }
 
 .job-duration, .job-location {
@@ -97,7 +106,7 @@ defineProps<{
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 1rem;
-  color: #b4bfcc;
+  color: #dae0e8;
 }
 
 .bullet-point::before {

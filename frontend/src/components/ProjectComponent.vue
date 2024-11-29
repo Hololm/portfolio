@@ -50,9 +50,15 @@ const props = withDefaults(defineProps<Props>(), {
         </div>
       </div>
     </div>
-    <div class="project-image">
-      <img :src="imageSrc" :alt="imageAlt || title" />
+    <div class="project-image" :class="{ reverse }">
+    <img :src="imageSrc" :alt="imageAlt || title" />
+    <div class="image-overlay"
+         :class="{ reverse }"
+         :style="{
+           background: `linear-gradient(to right, ${gradientStart}, ${gradientEnd})`
+         }">
     </div>
+  </div>
   </div>
 </template>
 
@@ -151,16 +157,52 @@ const props = withDefaults(defineProps<Props>(), {
 .project-image {
   flex: 1;
   position: relative;
+  z-index: 1;
 }
 
 .project-image img {
   width: 100%;
   border-radius: 4px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 2;
+}
+
+.image-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  top: 15px;
+  right: 15px; /* Changed from left to right */
+  z-index: 1;
+  opacity: 0.6;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-overlay.reverse {
+  right: auto;
+  left: 15px;
 }
 
 .project-image:hover img {
-  transform: translateY(-5px);
+  transform: translate(8px, -8px);
+}
+
+.project-image:hover .image-overlay {
+  transform: translate(-8px, 8px);
+}
+
+.project-image:hover .image-overlay.reverse {
+  transform: translate(8px, 8px);
+}
+
+.project-image.reverse:hover img {
+  transform: translate(-8px, -8px); /* Changed to move left instead of right */
+}
+
+.project-image.reverse:hover .image-overlay {
+  transform: translate(8px, 8px);
 }
 
 @media (max-width: 768px) {

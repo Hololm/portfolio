@@ -1,5 +1,7 @@
 <script setup lang="ts">
-
+const openResume = () => {
+  window.open('/Joseph_Holm_Resume.pdf', '_blank');
+}
 </script>
 
 <template>
@@ -11,12 +13,12 @@
       <p class="description">
         I'm a sophomore at ASU pursuing a degree in Computer Science.
         I'm passionate about building impactful, innovative software
-        and I'm always down for a good hackathon.
+        and I'm always down for a good hackathon every now and then.
         <br><br>
         In my spare time when I'm not coding,
-        you'll find me reading books or playing badminton and volleyball.
+        you'll find me reading books, watching movies or TV shows, or playing badminton and volleyball.
       </p>
-      <button class="resume-button">Check out my resume!</button>
+      <button @click="openResume" class="resume-button">Check out my resume!</button>
     </div>
     <div class="photo-container">
       <div class="placeholder-photo">

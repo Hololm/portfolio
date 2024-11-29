@@ -89,7 +89,7 @@
 .experience-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 0 2rem;
 }
 
 .project-tech span {

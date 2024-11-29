@@ -22,6 +22,19 @@ import JobCard from './JobCard.vue'
       ]"
     />
     <JobCard
+      logo="/assets/Arizona_State_University_logo-cropped.svg"
+      company="Arizona State University"
+      role="Safety Escort Associate"
+      startDate="Sep. 2024"
+      endDate="Present"
+      location="Tempe, Arizona, United States"
+      :bulletPoints="[
+        'Provide safe transportation services across campus while maintaining detailed digital records of routes, pick-up/drop-off times, and passenger data through Google Sheets',
+        'Monitor and respond to incoming safety-related communications through LiveSafe dashboard, ensuring prompt assistance to campus community members',
+        'Coordinate real-time transportation logistics while maintaining clear communication with dispatchers and passengers to optimize response times and service efficiency'
+      ]"
+    />
+    <JobCard
       logo="/assets/banner.svg"
       company="Banner Health"
       role="Software Engineer Intern"
@@ -29,22 +42,22 @@ import JobCard from './JobCard.vue'
       endDate="May 2023"
       location="Surprise, Arizona, United States"
       :bulletPoints="[
-        'Served as the primary touchpoint and relationship owner for high-value Consumer customers',
-        'Provided best-in-class customer experience through effective stakeholder management',
-        'Collaborated across teams to resolve customer issues'
+        'Engineered and deployed automated workflow solutions using Python and SS&C Blue Prism, reducing manual processing time by 60% and serving 1,000+ healthcare clients in a production environment',
+        'Collaborated with senior software engineers on enterprise-scale automation initiatives, implementing best practices in version control, code review, and agile development methodologies',
+        'Architected reusable backend script templates and standardized schemas that accelerated bot development cycles by 40% and improved code maintainability across the automation platform'
       ]"
     />
     <JobCard
-      logo="/assets/Arizona_State_University_logo-cropped.svg"
-      company="ASU"
-      role="Safety Escort Associate"
-      startDate="Sep. 2024"
-      endDate="Present"
-      location="Tempe, Arizona, United States"
+      logo="/assets/dysart.svg"
+      company="Dysart Schools"
+      role="Computer Systems Maintenance Assistant"
+      startDate="Jan. 2023"
+      endDate="Apr. 2023"
+      location="Surprise, Arizona, United States"
       :bulletPoints="[
-        'Served as the primary touchpoint and relationship owner for high-value Consumer customers',
-        'Provided best-in-class customer experience through effective stakeholder management',
-        'Collaborated across teams to resolve customer issues'
+        'Diagnosed and repaired aging computers to enhance performance, utilizing systematic troubleshooting methods and research to resolve complex technical issues',
+        'Collaborated on district-wide initiative to repair and maintain school-issued Chromebooks, ensuring optimal functionality for educational use',
+        'Managed inventory of PC components, including organizing new shipments and maintaining stock levels for future computer assembly projects'
       ]"
     />
   </div>

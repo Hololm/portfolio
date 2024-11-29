@@ -17,8 +17,6 @@
 .scroll-arrow-container {
   display: flex;
   justify-content: center;
-  margin-top: -50px;
-  padding-bottom: 60px;
 }
 
 .scroll-arrow {
@@ -28,10 +26,6 @@
 
 .scroll-arrow svg {
   transition: transform 0.3s ease;
-}
-
-.scroll-arrow:hover svg {
-  transform: translateY(10px);
 }
 
 .circle {
