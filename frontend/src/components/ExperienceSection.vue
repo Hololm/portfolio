@@ -22,7 +22,7 @@
       gradientStart="rgba(88,94,240,0.7)"
       gradientEnd="rgba(40,47,150,1)"
       imageSrc="/assets/trustify.png"
-      imageAlt="Lighthouse Project"
+      imageAlt="WHY IS THIS NOT WORKING VERCEL"
       githubLink="https://github.com/Hololm/reverse-beeper"
     />
 
