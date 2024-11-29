@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import NavBar from "@/components/NavBar.vue"
-import HomeView from "@/views/HomeView.vue"
+import FooterSection from "@/components/FooterSection.vue"
 
 </script>
 
@@ -12,6 +12,9 @@ import HomeView from "@/views/HomeView.vue"
     </Transition>
     <Transition name="slide-fade" appear>
       <RouterView />
+    </Transition>
+    <Transition name="fade" appear>
+      <FooterSection />
     </Transition>
   </div>
 </template>

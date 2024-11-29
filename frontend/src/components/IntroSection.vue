@@ -184,7 +184,7 @@ const openResume = () => {
   color: white;
   font-size: 20px;
   background: transparent;
-  border: 0.1rem solid #3158CF;
+  border: 0.1rem solid #88ABEC;
   padding: 16px 24px;
   position: relative;
   cursor: pointer;

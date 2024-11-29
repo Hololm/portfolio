@@ -16,9 +16,9 @@ const goToAbout = () => {
 <template>
   <IntroSection />
   <DownArrow />
-  <TechSection />
   <WorkSection />
   <ExperienceSection />
+  <TechSection />
 </template>
 
 <style scoped>
