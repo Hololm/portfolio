@@ -7,7 +7,12 @@ defineProps<{
   endDate: string
   location: string
   bulletPoints: string[]
+  websiteUrl: string
 }>()
+
+const openWork = (website: string) => {
+  window.open(website, '_blank');
+}
 </script>
 
 <template>
@@ -15,7 +20,11 @@ defineProps<{
     <div class="job-header">
       <div class="logo-container">
         <div class="logo-background">
-          <img :src="logo" :alt="company" class="logo-icon"/>
+          <img @click="openWork(websiteUrl)"
+               :src="logo"
+               :alt="company"
+               class="logo-icon"
+               style="cursor: pointer;"/>
         </div>
         <div class="job-info">
           <div class="job-title">{{ company}}</div>

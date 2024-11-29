@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import JobCard from './JobCard.vue'
+import JobCard from '@/components/JobCard.vue'
+
 </script>
 
 <template>
@@ -20,6 +21,7 @@ import JobCard from './JobCard.vue'
         'Developed RESTful API endpoints using Express.js and Node.js for secure message retrieval and processing, implementing custom middleware for data transformation',
         'Implemented client-side caching and WebSocket connections using Socket.io and Vue’s Composition API for real-time message updates, ensuring seamless message delivery and reducing API calls by batching requests'
       ]"
+      websiteUrl="https://thesoda.io/mentorship"
     />
     <JobCard
       logo="/assets/Arizona_State_University_logo-cropped.svg"
@@ -33,6 +35,7 @@ import JobCard from './JobCard.vue'
         'Monitor and respond to incoming safety-related communications through LiveSafe dashboard, ensuring prompt assistance to campus community members',
         'Coordinate real-time transportation logistics while maintaining clear communication with dispatchers and passengers to optimize response times and service efficiency'
       ]"
+      websiteUrl="https://www.asu.edu/"
     />
     <JobCard
       logo="/assets/banner.svg"
@@ -46,6 +49,7 @@ import JobCard from './JobCard.vue'
         'Collaborated with senior software engineers on enterprise-scale automation initiatives, implementing best practices in version control, code review, and agile development methodologies',
         'Architected reusable backend script templates and standardized schemas that accelerated bot development cycles by 40% and improved code maintainability across the automation platform'
       ]"
+      websiteUrl="https://www.bannerhealth.com/"
     />
     <JobCard
       logo="/assets/dysart.svg"
@@ -59,6 +63,7 @@ import JobCard from './JobCard.vue'
         'Collaborated on district-wide initiative to repair and maintain school-issued Chromebooks, ensuring optimal functionality for educational use',
         'Managed inventory of PC components, including organizing new shipments and maintaining stock levels for future computer assembly projects'
       ]"
+      websiteUrl="https://www.dysart.org/mainsite"
     />
   </div>
 </template>
