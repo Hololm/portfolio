@@ -178,7 +178,7 @@
   color: white;
   font-size: 20px;
   background: transparent;
-  border: 2px solid white;
+  border: 0.1rem solid #3158CF;
   padding: 16px 24px;
   position: relative;
   cursor: pointer;
