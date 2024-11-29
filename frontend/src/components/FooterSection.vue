@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const openEmail = () => {
-  window.location.href = 'mailto:your.email@example.com'
+  window.location.href = 'mailto:joseph.holm27@gmail.com'
 }
 </script>
 
