@@ -50,7 +50,7 @@ const openEmail = () => {
   color: #8b949e;
   font-family: 'Gilroy Regular', serif;
   font-size: 18px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .contact-button {
@@ -104,5 +104,11 @@ const openEmail = () => {
 
 .source-code a:hover {
   color: #eaecef;
+}
+
+@media (max-width: 768px) {
+  .footer-text {
+    max-width: 720px;
+  }
 }
 </style>

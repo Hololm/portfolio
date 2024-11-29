@@ -114,8 +114,8 @@ const openResume = () => {
   position: relative;
   z-index: 2;
   width: 450px;
-  height: 450px; /* Add fixed height equal to width */
-  aspect-ratio: 1; /* Ensure square shape */
+  height: 450px;
+  aspect-ratio: 1;
 }
 
 .placeholder-photo img {
