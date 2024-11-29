@@ -1,6 +1,14 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
 const openResume = () => {
   window.open('/Joseph_Holm_Resume.pdf', '_blank');
+}
+
+const goToBlog = () => {
+  router.push('/blog')
 }
 </script>
 
@@ -19,6 +27,8 @@ const openResume = () => {
         you'll find me reading books, watching movies or TV shows, or playing badminton and volleyball.
       </p>
       <button @click="openResume" class="resume-button">Check out my resume!</button>
+      <span class="button-separator">or...</span>
+      <button @click="goToBlog" class="blog-button">Check out my blog!</button>
     </div>
     <div class="photo-container">
       <div class="placeholder-photo">
@@ -48,6 +58,15 @@ const openResume = () => {
   .placeholder-photo::after {
     left: -15px;
     bottom: -15px;
+  }
+
+  .button-separator {
+    display: block;
+    margin: 16px 0;
+  }
+
+  .blog-button {
+    margin-top: 0;
   }
 
   .layout-container {
@@ -100,6 +119,31 @@ const openResume = () => {
   .resume-button {
     margin-top: 20px;
   }
+}
+.button-separator {
+  color: #eaecef;
+  font-family: 'Gilroy Regular', serif;
+  font-size: 16px;
+  margin: 0 16px;
+  opacity: 0.8;
+}
+
+.blog-button {
+  font-family: 'Gilroy Medium', serif;
+  border-radius: 4px;
+  color: white;
+  font-size: 20px;
+  background: transparent;
+  border: 0.1rem solid #88ABEC;
+  padding: 16px 24px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.blog-button:hover {
+  cursor: pointer;
+  transform: scale(1.01);
 }
 
 .photo-container {
