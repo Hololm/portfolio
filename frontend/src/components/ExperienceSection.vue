@@ -21,7 +21,7 @@
       ]"
       gradientStart="rgba(88,94,240,0.7)"
       gradientEnd="rgba(40,47,150,1)"
-      imageSrc="/assets/sodamentorship.png"
+      imageSrc="/assets/trustify.png"
       imageAlt="Lighthouse Project"
       githubLink="https://github.com/Hololm/reverse-beeper"
     />
