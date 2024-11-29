@@ -17,7 +17,7 @@ const openEmail = () => {
       <p class="copyright">Built by Joseph Holm</p>
       <div class="source-code">
         <img src="/assets/github.svg" alt="GitHub" class="github-icon"/>
-        <a href="https://github.com/yourusername/portfolio" target="_blank">
+        <a href="https://github.com/Hololm/portfolio" target="_blank">
           Source Code - GitHub
         </a>
       </div>
@@ -60,10 +60,10 @@ const openEmail = () => {
   font-size: 20px;
   background: transparent;
   border: 2px solid #88ABEC;
-  padding: 16px 48px; /* Wider button */
+  padding: 16px 48px;
   cursor: pointer;
   transition: transform 0.3s ease;
-  margin-bottom: 6rem; /* More gap before footer */
+  margin-bottom: 6rem;
 }
 
 .contact-button:hover {
