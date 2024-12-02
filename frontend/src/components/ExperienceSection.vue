@@ -89,7 +89,10 @@
 .experience-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .project-tech span {
@@ -108,7 +111,17 @@
 .project-image:hover img {
   transform: translateY(-5px);
 }
+@media (max-width: 768px) {
+  .experience-container {
+    padding: 0 1rem;
+  }
 
+  .experience-title {
+    padding: 40px 1rem;
+    font-size: 32px;
+    text-align: center;
+  }
+}
 </style>
 
 <script setup lang="ts">

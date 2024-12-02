@@ -209,28 +209,78 @@ const props = withDefaults(defineProps<Props>(), {
   .project-row, .project-row.reverse {
     flex-direction: column;
     gap: 2rem;
+    padding: 0 1rem;
+    margin-bottom: 60px;
+  }
+
+  .project-title {
+    font-size: 28px;
+    text-align: left;
   }
 
   .project-content {
-    text-align: center;
+    text-align: left;
+    width: 100%;
   }
 
-.project-tech-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
+  .project-description {
+    padding: 1.5rem;
+    margin: 1rem 0;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .project-tech-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .project-tech-container.reverse {
+    flex-direction: column;
+  }
 
   .project-tech {
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    width: 100%;
+    justify-content: flex-start;
   }
 
-.project-social-icons {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  margin-left: auto; /* Default: push to right */
-}
+  .project-tech.reverse {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .project-tech span {
+    font-size: 14px;
+  }
+
+  .project-social-icons {
+    margin: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .project-image {
+    width: 100%;
+  }
+
+  .image-overlay {
+    top: 10px;
+    right: 10px;
+  }
+
+  .image-overlay.reverse {
+    left: 10px;
+  }
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 </style>

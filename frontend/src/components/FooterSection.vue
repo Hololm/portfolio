@@ -107,8 +107,35 @@ const openEmail = () => {
 }
 
 @media (max-width: 768px) {
+  .footer-container {
+    padding: 0 1rem 1.5rem;
+  }
+
+  .footer-title {
+    font-size: 28px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+
   .footer-text {
-    max-width: 720px;
+    font-size: 15px;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-button {
+    font-size: 16px;
+    padding: 12px 32px;
+    margin-bottom: 3rem;
+  }
+
+  .copyright, .source-code a {
+    font-size: 13px;
+  }
+
+  .github-icon {
+    width: 14px;
+    height: 14px;
   }
 }
 </style>

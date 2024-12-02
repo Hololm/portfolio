@@ -82,8 +82,17 @@ import JobCard from '@/components/JobCard.vue'
 
 .work-section {
   flex-direction: column;
-  max-width: 1200px;
+  max-width: 1250px;
   border-left: 4px solid rgba(127, 159, 220, 0.3);
-  margin: 0 6.4rem 0 auto;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .work-section {
+    margin: 0;
+    padding: 0 1rem;
+    border-left: none;
+  }
 }
 </style>

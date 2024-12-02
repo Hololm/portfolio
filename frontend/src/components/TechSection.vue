@@ -111,8 +111,8 @@
             <span>Kubernetes</span>
           </div>
           <div class="tech-item">
-            <img src="/assets/docker.svg" alt="Docker" class="tech-icon"/>
-            <span>Docker</span>
+            <img src="/assets/huggingface.svg" alt="huggingface" class="tech-icon"/>
+            <span>Transformers</span>
           </div>
 
         </div>
@@ -130,8 +130,8 @@
             <span>Jenkins</span>
           </div>
           <div class="tech-item">
-            <img src="/assets/huggingface.svg" alt="huggingface" class="tech-icon"/>
-            <span>Transformers</span>
+            <img src="/assets/docker.svg" alt="Docker" class="tech-icon"/>
+            <span>Docker</span>
           </div>
         </div>
       </div>
@@ -187,8 +187,7 @@
 .tech-content {
   display: flex;
   justify-content: space-around;
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 1rem;
   font-family: 'Gilroy Medium', serif;
   color: white;
 }
@@ -221,10 +220,56 @@
 @media (max-width: 768px) {
   .tech-container {
     flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .tech-card {
     margin-bottom: 1rem;
+    padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .tech-content {
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .tech-column {
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .tech-item {
+    gap: 0.5rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .tech-item span {
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .tech-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  .tech-header {
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+  }
+
+  .tech-title {
+    font-size: 32px;
+    padding: 40px 1rem;
   }
 }
 </style>

@@ -41,7 +41,7 @@ const goToBlog = () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
   padding: 0 2rem;
   min-height: 80vh;
@@ -50,102 +50,11 @@ const goToBlog = () => {
 .intro-container {
   border-left: 4px solid rgba(127, 159, 220, 0.3);
   padding-left: 30px;
-}
-
-@media (max-width: 768px) {
-  .placeholder-photo::after {
-    left: -15px;
-    bottom: -15px;
-  }
-
-  .button-separator {
-    display: block;
-    margin: 16px 0;
-  }
-
-  .blog-button {
-    margin-top: 0;
-  }
-
-  .layout-container {
-    flex-direction: column-reverse;
-    padding: 1rem;
-    justify-content: center;
-    min-height: auto;
-  }
-   .intro-container {
-    padding-right: 0;
-    margin-top: 2rem;
-    text-align: center;
-     position: relative; /* Add this */
-  }
-
-  .description {
-    margin: 0 auto;
-  }
-
-  .photo-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  .placeholder-photo {
-    width: 300px;
-    height: 300px;
-  }
-
-  .placeholder-photo::after {
-    width: 100%;
-    height: 100%;
-    left: -15px;
-    bottom: -15px;
-  }
-
-
-  .placeholder-photo img {
-    width: 300px;
-    height: 300px;
-  }
-
-  .name {
-    font-size: 48px;
-  }
-
-  .resume-button {
-    margin-top: 20px;
-  }
-}
-.button-separator {
-  color: #eaecef;
-  font-family: 'Gilroy Regular', serif;
-  font-size: 16px;
-  margin: 0 16px;
-  opacity: 0.8;
-}
-
-.blog-button {
-  font-family: 'Gilroy Medium', serif;
-  border-radius: 4px;
-  color: white;
-  font-size: 20px;
-  background: transparent;
-  border: 0.1rem solid #88ABEC;
-  padding: 16px 24px;
-  position: relative;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.blog-button:hover {
-  cursor: pointer;
-  transform: scale(1.01);
+  flex: 0 1 60%; /* Adjust the flex-basis to control width */
 }
 
 .photo-container {
-  flex: 1;
+  flex: 0 1 35%; /* Adjust the flex-basis to control width */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,8 +64,6 @@ const goToBlog = () => {
 .placeholder-photo {
   position: relative;
   z-index: 2;
-  width: 450px;
-  height: 450px;
   aspect-ratio: 1;
 }
 
@@ -168,18 +75,6 @@ const goToBlog = () => {
   position: relative;
 }
 
-.placeholder-photo::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  left: 20px;
-  bottom: -10px;
-  z-index: -1;
-  aspect-ratio: 1; /* Ensure square shape */
-}
 
 .greeting {
   font-size: 28px;
@@ -236,5 +131,57 @@ const goToBlog = () => {
 .resume-button:hover {
   cursor: pointer;
   transform: scale(1.01);
+}
+
+@media (max-width: 768px) {
+  .intro-container {
+    border-left: none;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .layout-container {
+    flex-direction: column-reverse;
+    padding: 1rem;
+    justify-content: center;
+    min-height: auto;
+    gap: 2rem; /* Reduce gap for mobile view */
+  }
+  .intro-container {
+    padding-right: 0;
+    margin-top: 2rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .description {
+    margin: 0 auto;
+  }
+
+  .photo-container {
+    margin-left: 0; /* Remove left margin for mobile view */
+    margin-bottom: 2rem; /* Add bottom margin for separation in mobile view */
+  }
+
+  .placeholder-photo {
+    width: 300px;
+    height: 300px;
+  }
+
+  .name {
+    font-size: 48px;
+  }
+
+  .resume-button {
+    margin-top: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .greeting {
+    font-size: 24px;
+  }
 }
 </style>

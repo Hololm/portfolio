@@ -46,6 +46,9 @@ const openWork = (website: string) => {
 .work-container {
   margin-bottom: 2rem;
   padding-left: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .job-header {
@@ -105,10 +108,11 @@ const openWork = (website: string) => {
 }
 
 .bullet-points {
-  padding-left: calc(64px + 1rem);
   position: relative;
   font-family: 'Gilroy Regular', serif;
   max-width: 800px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .bullet-point {
@@ -140,5 +144,36 @@ const openWork = (website: string) => {
 
 .bullet-content {
   line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .work-container {
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .bullet-points {
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .bullet-point {
+    padding-left: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .bullet-content {
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .job-info {
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
 }
 </style>
