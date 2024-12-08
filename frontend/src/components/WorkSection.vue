@@ -49,9 +49,9 @@ import JobCard from '@/components/JobCard.vue'
       endDate="May 2023"
       location="Surprise, Arizona, United States"
       :bulletPoints="[
-        'Improved automation efficiency for healthcare workflows, resulting in a 25% reduction in manual data entry errors,\n'+
-        'by developing and implementing 5 new RPA processes',
-        'Accelerated bot development cycles by 40%, reducing average project delivery time from 4 weeks to 2.5 weeks, by\n'+
+        'Improved automation efficiency for healthcare workflows, resulting in a 25% reduction in manual data entry errors\n'+
+        'through the implementation of 5 new RPA processes',
+        'Accelerated bot development cycles by 40%, reducing average project delivery time from 4 weeks to 2.5 weeks by\n'+
         'architecting reusable backend script templates and standardized schemas in BluePrism',
         'Enhanced cross-team collaboration and knowledge sharing by creating comprehensive documentation for RPA\n'+
         'solutions, including process design documents and user guides, facilitating smooth handovers to operations teams'
