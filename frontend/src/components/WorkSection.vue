@@ -16,10 +16,14 @@ import JobCard from '@/components/JobCard.vue'
       endDate="Present"
       location="Tempe, Arizona, United States"
       :bulletPoints="[
-        'Developed a social media message retrieval system using Vue and Vite that enables users to send and receive Instagram and WhatsApp messages through a dynamic web interface',
-        'Built a responsive frontend interface using Vue.js and Tailwind CSS, implementing dynamic routing and Vuex state management for optimized component rendering and user interactions',
-        'Developed RESTful API endpoints using Express.js and Node.js for secure message retrieval and processing, implementing custom middleware for data transformation',
-        'Implemented client-side caching and WebSocket connections using Socket.io and Vue’s Composition API for real-time message updates, ensuring seamless message delivery and reducing API calls by batching requests'
+        'Selected as the top-performing team to present project outcomes at a company-wide event, showcasing the\n'+
+        'messaging platform to an audience of over 100 attendees including industry professionals\n',
+        'Developed the Vue chat interface for an all-in-one messaging platform, enabling users to send and receive messages\n'+
+        'across multiple platforms through a single web client',
+        'Worked on REST API message endpoints using ExpressJS and NodeJS, allowing for secure message retrieval and\n'+
+        'processing\n',
+        'Designed and implemented a MongoDB database schema to efficiently store and retrieve user session data and\n'+
+'messages, optimizing query performance and enabling real-time message synchronization across platforms',
       ]"
       websiteUrl="https://thesoda.io/mentorship"
     />
@@ -45,9 +49,12 @@ import JobCard from '@/components/JobCard.vue'
       endDate="May 2023"
       location="Surprise, Arizona, United States"
       :bulletPoints="[
-        'Engineered and deployed automated workflow solutions using Python and SS&C Blue Prism, reducing manual processing time by 60% and serving 1,000+ healthcare clients in a production environment',
-        'Collaborated with senior software engineers on enterprise-scale automation initiatives, implementing best practices in version control, code review, and agile development methodologies',
-        'Architected reusable backend script templates and standardized schemas that accelerated bot development cycles by 40% and improved code maintainability across the automation platform'
+        'Improved automation efficiency for healthcare workflows, resulting in a 25% reduction in manual data entry errors,\n'+
+        'by developing and implementing 5 new RPA processes',
+        'Accelerated bot development cycles by 40%, reducing average project delivery time from 4 weeks to 2.5 weeks, by\n'+
+        'architecting reusable backend script templates and standardized schemas in BluePrism',
+        'Enhanced cross-team collaboration and knowledge sharing by creating comprehensive documentation for RPA\n'+
+        'solutions, including process design documents and user guides, facilitating smooth handovers to operations teams'
       ]"
       websiteUrl="https://www.bannerhealth.com/"
     />
