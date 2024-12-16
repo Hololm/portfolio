@@ -19,6 +19,7 @@ import FooterSection from "@/components/FooterSection.vue"
 </template>
 
 <style>
+
 /* Fade animation for navbar */
 .fade-enter-active {
   transition: opacity 0.6s ease;

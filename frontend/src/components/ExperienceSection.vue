@@ -1,4 +1,14 @@
+<script setup lang="ts">
+import { onMounted } from 'vue'
+import ProjectComponent from '@/components/ProjectComponent.vue'
+import AOS from 'aos'
+
+onMounted(() => {
+  AOS.init()
+})
+</script>
 <template>
+  <div data-aos="fade-up">
   <div class="experience-title">
     My Projects
   </div>
@@ -71,6 +81,7 @@
       githubLink="https://github.com/ZacharyHampton/sunhacks-2024"
       devpostLink="https://devpost.com/software/findit-lhqfgr"
     />
+    </div>
   </div>
 </template>
 
@@ -123,7 +134,3 @@
   }
 }
 </style>
-
-<script setup lang="ts">
-import ProjectComponent from '@/components/ProjectComponent.vue'
-</script>
