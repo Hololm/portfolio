@@ -27,7 +27,7 @@ const openWork = (website: string) => {
                style="cursor: pointer;"/>
         </div>
         <div class="job-info">
-          <div class="job-title">{{ company}}</div>
+          <div class="job-title">{{ company }}</div>
           <div class="job-company">{{ role }}</div>
           <div class="job-duration">{{ startDate }} - {{ endDate }}</div>
           <div class="job-location">{{ location }}</div>
@@ -36,8 +36,8 @@ const openWork = (website: string) => {
     </div>
     <div class="bullet-points">
       <div class="bullet-point" v-for="(point, index) in bulletPoints" :key="index">
-    <div class="bullet-content">{{ point }}</div>
-  </div>
+        <div class="bullet-content">{{ point }}</div>
+      </div>
     </div>
   </div>
 </template>
@@ -117,7 +117,7 @@ const openWork = (website: string) => {
 
 .bullet-point {
   position: relative;
-  padding-left: 1.5rem;
+  padding-left: 2rem;
   margin-bottom: 1rem;
   color: #dae0e8;
 }
@@ -125,55 +125,49 @@ const openWork = (website: string) => {
 .bullet-point::after {
   content: '';
   position: absolute;
-  left: 6px;
-  top: 25%;
+  left: 0.5rem;
+  top: 0.6rem;
   width: 6px;
   height: 6px;
   border-top: 2px solid #88ABEC;
   border-right: 2px solid #88ABEC;
-  transform: translateY(-50%) rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .bullet-content {
   line-height: 1.6;
 }
 
-.bullet-point:last-child .bullet-marker::before {
-  display: none;
-}
-
-.bullet-content {
-  line-height: 1.6;
-}
 @media (max-width: 768px) {
   .work-container {
-    padding: 0 1rem;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 0 0.5rem;
+  }
+
+  .logo-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .job-info {
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem 0;
   }
 
   .bullet-points {
-    padding: 0 1rem;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 0 0.5rem;
   }
 
   .bullet-point {
     padding-left: 1.5rem;
-    width: 100%;
-    box-sizing: border-box;
   }
 
-  .bullet-content {
-    width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+  .bullet-point::after {
+    left: 0.25rem;
   }
 
-  .job-info {
-    width: 100%;
-    padding: 0 1rem;
-    box-sizing: border-box;
+  .job-duration, .job-location {
+    text-align: center;
   }
 }
 </style>

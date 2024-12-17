@@ -17,13 +17,13 @@ import JobCard from '@/components/JobCard.vue'
       location="Tempe, Arizona, United States"
       :bulletPoints="[
         'Selected as the top-performing team to present project outcomes at a company-wide event, showcasing the\n'+
-        'messaging platform to an audience of over 100 attendees including industry professionals\n',
+        'messaging platform to an audience of over 100 attendees including industry professionals',
         'Developed the Vue chat interface for an all-in-one messaging platform, enabling users to send and receive messages\n'+
         'across multiple platforms through a single web client',
-        'Worked on REST API message endpoints using ExpressJS and NodeJS, allowing for secure message retrieval and\n'+
-        'processing\n',
-        'Designed and implemented a MongoDB database schema to efficiently store and retrieve user session data and\n'+
-'messages, optimizing query performance and enabling real-time message synchronization across platforms',
+        'Deployed REST API message endpoints using ExpressJS and NodeJS, allowing for secure message retrieval and\n'+
+        'processing',
+        'Implemented a MongoDB database schema to efficiently store and retrieve user session data and messages,\n'+
+        'optimizing query performance and enabling real-time message synchronization across platforms'
       ]"
       websiteUrl="https://thesoda.io/mentorship"
     />

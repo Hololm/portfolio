@@ -49,7 +49,7 @@
     </div>
     <div class="tech-card"
          :style="{
-             background: `linear-gradient(to right, rgba(59, 130, 246, 0.8), rgba(37, 99, 235, 0.8))`
+             background: `linear-gradient(to right, rgba(60, 130, 246, 0.8), rgba(37, 99, 235, 0.8))`
            }">
       <p class="tech-header">Frameworks & Libraries</p>
       <div class="tech-content">

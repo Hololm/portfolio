@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+import { onMounted } from 'vue'
+import AOS from 'aos'
 
 const router = useRouter()
 
@@ -10,6 +12,10 @@ const openResume = () => {
 const goToBlog = () => {
   router.push('/blog')
 }
+
+onMounted(() => {
+  AOS.init()
+})
 </script>
 
 <template>
