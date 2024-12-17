@@ -8,6 +8,8 @@
              background: `linear-gradient(to right, rgba(52, 211, 153, 0.8), rgba(35, 197, 94, 0.8))`
            }">
       <p class="tech-header">Programming Languages</p>
+
+
       <div class="tech-content">
         <div class="tech-column">
           <div class="tech-item">
@@ -148,6 +150,16 @@
   font-family: 'Gilroy Bold', serif;
   font-size: 38px;
   color: #eaecef;
+}
+
+.title-line {
+  background-color: #8b949e;
+  width: 80px;
+  height: 1px;
+}
+
+.title-row {
+  display: flex;
 }
 
 .tech-container {

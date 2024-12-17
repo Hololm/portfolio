@@ -30,7 +30,7 @@ const openEmail = () => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .footer-title {
@@ -62,7 +62,7 @@ const openEmail = () => {
   border: 2px solid #88ABEC;
   padding: 16px 48px;
   cursor: pointer;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 .footer-bottom {
@@ -76,6 +76,7 @@ const openEmail = () => {
   color: #8b949e;
   font-family: 'Gilroy Regular', serif;
   font-size: 14px;
+  margin-bottom: 0.5rem;
 }
 
 .source-code {
