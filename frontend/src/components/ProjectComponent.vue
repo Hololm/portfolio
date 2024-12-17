@@ -68,7 +68,7 @@ const props = withDefaults(defineProps<Props>(), {
   display: flex;
   align-items: center;
   margin-bottom: 100px;
-  gap: 4rem;
+  gap: 6rem;
 }
 
 .project-row.reverse {

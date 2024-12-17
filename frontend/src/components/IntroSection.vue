@@ -131,12 +131,10 @@ onMounted(() => {
   padding: 16px 24px;
   position: relative;
   cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
 .resume-button:hover {
   cursor: pointer;
-  transform: scale(1.01);
 }
 
 @media (max-width: 768px) {

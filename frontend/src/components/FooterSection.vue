@@ -62,12 +62,7 @@ const openEmail = () => {
   border: 2px solid #88ABEC;
   padding: 16px 48px;
   cursor: pointer;
-  transition: transform 0.3s ease;
   margin-bottom: 6rem;
-}
-
-.contact-button:hover {
-  transform: scale(1.01);
 }
 
 .footer-bottom {

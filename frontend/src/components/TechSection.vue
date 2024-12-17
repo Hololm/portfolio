@@ -153,11 +153,11 @@
 
 .tech-container {
   justify-content: center;
-  gap: 2rem;
+  gap: 4rem; /* Increased from 2rem to 4rem */
   flex-direction: row;
   display: flex;
   padding: 24px;
-  max-width: 1200px;
+  max-width: 1400px; /* Increased from 1200px to accommodate wider spacing */
   margin: 0 auto;
 }
 
@@ -181,6 +181,7 @@
   font-family: 'Gilroy Bold', serif;
   color: white;
   margin-bottom: 2rem;
+  margin-top: 0rem;
   text-align: center;
 }
 
@@ -212,8 +213,7 @@
 }
 
 .tech-item span {
-  color: white;
-  font-family: 'Gilroy Medium', serif;
+  color: #ffffff;
   font-size: 16px;
 }
 
@@ -223,6 +223,7 @@
     padding: 1rem;
     width: 100%;
     box-sizing: border-box;
+    gap: 2rem;
   }
 
   .tech-card {

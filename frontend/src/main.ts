@@ -10,5 +10,6 @@ const app = createApp(App)
 
 app.use(router)
 
-AOS.init()
 app.mount('#app')
+
+AOS.init()

@@ -1,14 +1,9 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import ProjectComponent from '@/components/ProjectComponent.vue'
-import AOS from 'aos'
-
-onMounted(() => {
-  AOS.init()
-})
 </script>
 <template>
-  <div data-aos="fade-up">
+  <div>
   <div class="experience-title">
     My Projects
   </div>
@@ -98,7 +93,7 @@ onMounted(() => {
 }
 
 .experience-container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 1rem;
   width: 100%;
