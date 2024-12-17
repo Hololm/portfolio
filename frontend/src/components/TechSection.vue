@@ -141,23 +141,21 @@
 
 <style scoped>
 .tech-title {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  align-items: center;
+  padding: 60px 0;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-family: 'Gilroy Bold', serif;
   font-size: 38px;
   color: #eaecef;
 }
 
 .tech-container {
-  justify-content: center;
-  gap: 4rem; /* Increased from 2rem to 4rem */
-  flex-direction: row;
   display: flex;
+  justify-content: center;
+  gap: 4rem;
   padding: 24px;
-  max-width: 1400px; /* Increased from 1200px to accommodate wider spacing */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -168,7 +166,6 @@
   border-radius: 8px;
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease, border-color 0.3s ease;
-  min-height: 300px;
 }
 
 .tech-card:hover {
@@ -180,17 +177,16 @@
   font-size: 24px;
   font-family: 'Gilroy Bold', serif;
   color: white;
+  margin-top: 0;
   margin-bottom: 2rem;
-  margin-top: 0rem;
   text-align: center;
 }
 
 .tech-content {
   display: flex;
-  justify-content: space-around;
-  gap: 1rem;
+  justify-content: center;
+  gap: 2rem;
   font-family: 'Gilroy Medium', serif;
-  color: white;
 }
 
 .tech-column {
@@ -209,63 +205,33 @@
   width: 32px;
   height: 32px;
   object-fit: contain;
-  padding: 2px;
 }
 
 .tech-item span {
   color: #ffffff;
   font-size: 16px;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
   .tech-container {
     flex-direction: column;
     padding: 1rem;
-    width: 100%;
-    box-sizing: border-box;
     gap: 2rem;
   }
 
   .tech-card {
-    margin-bottom: 1rem;
     padding: 1.5rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .tech-content {
-    gap: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .tech-column {
-    gap: 1rem;
-    width: 100%;
-  }
-
-  .tech-item {
-    gap: 0.5rem;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .tech-item span {
-    font-size: 16px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .tech-icon {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
   }
 
   .tech-header {
     font-size: 20px;
     margin-bottom: 1.5rem;
+  }
+
+  .tech-icon {
+    width: 24px;
+    height: 24px;
   }
 
   .tech-title {
@@ -274,6 +240,7 @@
   }
 }
 </style>
+
 
 <script setup lang="ts">
 </script>
