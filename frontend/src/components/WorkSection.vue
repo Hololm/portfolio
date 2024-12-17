@@ -70,7 +70,7 @@ import JobCard from '@/components/JobCard.vue'
         'Collaborated on district-wide initiative to repair and maintain school-issued Chromebooks, ensuring optimal functionality for educational use',
         'Managed inventory of PC components, including organizing new shipments and maintaining stock levels for future computer assembly projects'
       ]"
-      websiteUrl="https://www.dysart.org/mainsite"
+      websiteUrl="https://dysart.org/mainsite"
     />
   </div>
 </template>
