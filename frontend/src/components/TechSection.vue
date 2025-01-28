@@ -1,139 +1,133 @@
 <template>
-  <div class="tech-title">
-    My Tech Stack
-  </div>
-  <div class="tech-container">
-    <div class="tech-card"
-         :style="{
-             background: `linear-gradient(to right, rgba(52, 211, 153, 0.8), rgba(35, 197, 94, 0.8))`
-           }">
-      <p class="tech-header">Programming Languages</p>
+  <div class="tech-section">
+    <h2 class="tech-title">My Tech Stack</h2>
 
-
-      <div class="tech-content">
-        <div class="tech-column">
-          <div class="tech-item">
-            <img src="/assets/python-logo-only.svg" alt="Python" class="tech-icon"/>
-            <span>Python</span>
+    <div class="tech-container">
+      <!-- Programming Languages Card -->
+      <div class="tech-card">
+        <h3 class="tech-header">Programming Languages</h3>
+        <div class="tech-content">
+          <div class="tech-column">
+            <div class="tech-item">
+              <img src="/assets/python-logo-only.svg" alt="Python" class="tech-icon"/>
+              <span>Python</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/javascript.svg" alt="JavaScript" class="tech-icon"/>
+              <span>JavaScript</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/typescript.svg" alt="TypeScript" class="tech-icon"/>
+              <span>TypeScript</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/matlab.svg" alt="MATLAB" class="tech-icon"/>
+              <span>MATLAB</span>
+            </div>
           </div>
-          <div class="tech-item">
-            <img src="/assets/javascript.svg" alt="JavaScript" class="tech-icon"/>
-            <span>JavaScript</span>
-          </div>
-          <div class="tech-item">
-            <img src="/assets/typescript.svg" alt="TypeScript" class="tech-icon"/>
-            <span>TypeScript</span>
-          </div>
-          <div class="tech-item">
-            <img src="/assets/matlab.svg" alt="MATLAB" class="tech-icon"/>
-            <span>MATLAB</span>
-          </div>
-        </div>
-        <div class="tech-column">
-          <div class="tech-item">
-            <img src="/assets/java.svg" alt="Java" class="tech-icon"/>
-            <span>Java</span>
-          </div>
-          <div class="tech-item">
-            <img src="/assets/C.svg" alt="C" class="tech-icon"/>
-            <span>C</span>
-          </div>
-          <div class="tech-item">
-            <img src="/assets/cpp.svg" alt="C++" class="tech-icon"/>
-            <span>C++</span>
-          </div>
-          <div class="tech-item">
-            <img src="/assets/sql.svg" alt="SQL" class="tech-icon"/>
-            <span>SQL</span>
+          <div class="tech-column">
+            <div class="tech-item">
+              <img src="/assets/java.svg" alt="Java" class="tech-icon"/>
+              <span>Java</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/C.svg" alt="C" class="tech-icon"/>
+              <span>C</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/cpp.svg" alt="C++" class="tech-icon"/>
+              <span>C++</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/sql.svg" alt="SQL" class="tech-icon"/>
+              <span>SQL</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="tech-card"
-         :style="{
-             background: `linear-gradient(to right, rgba(60, 130, 246, 0.8), rgba(37, 99, 235, 0.8))`
-           }">
-      <p class="tech-header">Frameworks & Libraries</p>
-      <div class="tech-content">
-        <div class="tech-column">
-          <div class="tech-item">
-            <img src="/assets/vue.svg" alt="Vue.js" class="tech-icon"/>
-            <span>Vue</span>
+
+      <!-- Frameworks Card -->
+      <div class="tech-card">
+        <h3 class="tech-header">Frameworks & Libraries</h3>
+        <div class="tech-content">
+          <div class="tech-column">
+            <div class="tech-item">
+              <img src="/assets/vue.svg" alt="Vue.js" class="tech-icon"/>
+              <span>Vue</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/react.svg" alt="React" class="tech-icon"/>
+              <span>React</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/fastapi.svg" alt="FastAPI" class="tech-icon"/>
+              <span>FastAPI</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/Flask.svg" alt="Flask" class="tech-icon"/>
+              <span>Flask</span>
+            </div>
           </div>
-          <div class="tech-item">
-            <img src="/assets/react.svg" alt="React" class="tech-icon"/>
-            <span>React</span>
-          </div>
-          <div class="tech-item">
-            <img src="/assets/fastapi.svg" alt="FastAPI" class="tech-icon"/>
-            <span>FastAPI</span>
-          </div>
-          <div class="tech-item">
-            <img src="/assets/Flask.svg" alt="Flask" class="tech-icon"/>
-            <span>Flask</span>
-          </div>
-        </div>
-        <div class="tech-column">
-          <div class="tech-item">
-            <img src="/assets/nodejs.svg" alt="Node.js" class="tech-icon"/>
-            <span>Node.js</span>
-          </div>
-          <div class="tech-item">
-            <img src="/assets/express.svg" alt="Express" class="tech-icon"/>
-            <span>Express.js</span>
-          </div>
-          <div class="tech-item">
-            <img src="/assets/next.svg" alt="Next" class="tech-icon"/>
-            <span>Next.js</span>
-          </div>
-          <div class="tech-item">
-            <img src="/assets/vite.svg" alt="Vite" class="tech-icon"/>
-            <span>Vite</span>
+          <div class="tech-column">
+            <div class="tech-item">
+              <img src="/assets/nodejs.svg" alt="Node.js" class="tech-icon"/>
+              <span>Node.js</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/express.svg" alt="Express" class="tech-icon"/>
+              <span>Express.js</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/next.svg" alt="Next" class="tech-icon"/>
+              <span>Next.js</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/vite.svg" alt="Vite" class="tech-icon"/>
+              <span>Vite</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="tech-card"
-         :style="{
-         background: `linear-gradient(to right, rgba(91, 18, 238, 0.8), rgba(111, 36, 243, 0.8))`
-                       }">
-      <p class="tech-header">Cloud & Infrastructure</p>
-      <div class="tech-content">
-        <div class="tech-column">
-          <div class="tech-item">
-            <img src="/assets/mongodb.svg" alt="MongoDB" class="tech-icon"/>
-            <span>NoSQL</span>
-          </div>
-          <div class="tech-item">
-            <img src="/assets/selenium.svg" alt="AWS" class="tech-icon"/>
-            <span>Selenium</span>
-          </div>
-          <div class="tech-item">
-            <img src="/assets/kubernetes.svg" alt="AWS" class="tech-icon"/>
-            <span>Kubernetes</span>
-          </div>
-          <div class="tech-item">
-            <img src="/assets/huggingface.svg" alt="huggingface" class="tech-icon"/>
-            <span>Transformers</span>
-          </div>
 
-        </div>
-        <div class="tech-column">
-          <div class="tech-item">
-            <img src="/assets/postgresql.svg" alt="PostgreSQL" class="tech-icon"/>
-            <span>RDBMS</span>
+      <!-- Infrastructure Card -->
+      <div class="tech-card">
+        <h3 class="tech-header">Cloud & Infrastructure</h3>
+        <div class="tech-content">
+          <div class="tech-column">
+            <div class="tech-item">
+              <img src="/assets/mongodb.svg" alt="MongoDB" class="tech-icon"/>
+              <span>NoSQL</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/selenium.svg" alt="Selenium" class="tech-icon"/>
+              <span>Selenium</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/kubernetes.svg" alt="Kubernetes" class="tech-icon"/>
+              <span>Kubernetes</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/huggingface.svg" alt="huggingface" class="tech-icon"/>
+              <span>Transformers</span>
+            </div>
           </div>
-          <div class="tech-item">
-            <img src="/assets/git.svg" alt="Git" class="tech-icon"/>
-            <span>Git</span>
-          </div>
-          <div class="tech-item">
-            <img src="/assets/jenkins.svg" alt="Jenkins" class="tech-icon"/>
-            <span>Jenkins</span>
-          </div>
-          <div class="tech-item">
-            <img src="/assets/docker.svg" alt="Docker" class="tech-icon"/>
-            <span>Docker</span>
+          <div class="tech-column">
+            <div class="tech-item">
+              <img src="/assets/postgresql.svg" alt="PostgreSQL" class="tech-icon"/>
+              <span>RDBMS</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/git.svg" alt="Git" class="tech-icon"/>
+              <span>Git</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/jenkins.svg" alt="Jenkins" class="tech-icon"/>
+              <span>Jenkins</span>
+            </div>
+            <div class="tech-item">
+              <img src="/assets/docker.svg" alt="Docker" class="tech-icon"/>
+              <span>Docker</span>
+            </div>
           </div>
         </div>
       </div>
@@ -142,63 +136,53 @@
 </template>
 
 <style scoped>
-.tech-title {
-  padding: 60px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Gilroy Bold', serif;
-  font-size: 38px;
-  color: #eaecef;
-}
-
-.title-line {
-  background-color: #8b949e;
-  width: 80px;
-  height: 1px;
-}
-
-.title-row {
-  display: flex;
-}
-
-.tech-container {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  padding: 24px;
-  max-width: 1200px;
+.tech-section {
+  padding: 4rem 2rem;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
+.tech-title {
+  text-align: center;
+  font-family: 'Gilroy Bold', serif;
+  font-size: 2.5rem;
+  color: #eaecef;
+  margin-bottom: 3rem;
+}
+
+.tech-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
 .tech-card {
-  flex: 1;
+  background: rgba(30, 30, 30, 0.6);
+  border-radius: 20px;
   padding: 2rem;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tech-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: #4ECDC4;
+  background: rgba(30, 30, 30, 0.8);
 }
 
 .tech-header {
-  font-size: 24px;
+  color: #4ECDC4;
   font-family: 'Gilroy Bold', serif;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  margin: 0 0 2rem 0;
   text-align: center;
 }
 
 .tech-content {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   gap: 2rem;
-  font-family: 'Gilroy Medium', serif;
 }
 
 .tech-column {
@@ -210,26 +194,46 @@
 .tech-item {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.tech-item:hover {
+  background: rgba(78, 205, 196, 0.1);
 }
 
 .tech-icon {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
 }
 
 .tech-item span {
-  color: #ffffff;
-  font-size: 16px;
-  white-space: nowrap;
+  color: #eaecef;
+  font-family: 'Gilroy Medium', serif;
+  font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .tech-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
+  .tech-section {
+    padding: 2rem 1rem;
+  }
+
   .tech-container {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .tech-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
 
   .tech-card {
@@ -237,7 +241,7 @@
   }
 
   .tech-header {
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 1.5rem;
   }
 
@@ -246,13 +250,8 @@
     height: 24px;
   }
 
-  .tech-title {
-    font-size: 32px;
-    padding: 40px 1rem;
+  .tech-item span {
+    font-size: 0.9rem;
   }
 }
 </style>
-
-
-<script setup lang="ts">
-</script>

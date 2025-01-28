@@ -1,13 +1,41 @@
 <script setup lang="ts">
 import JobCard from '@/components/JobCard.vue'
-
 </script>
 
 <template>
-  <div class="work-title">
-    My Experience
-  </div>
-  <div class="work-section">
+  <section class="work-section">
+    <h2 class="work-title">Professional Experience</h2>
+    <div class="jobs-container">
+      <JobCard
+      logo="/assets/docusign.svg"
+      company="Docusign"
+      role="Incoming Software Engineering Intern"
+      startDate="Jun. 2025"
+      endDate="Aug. 2025"
+      location="SF Bay Area, California, United States"
+      :technologies="[]"
+      :bulletPoints="[
+        'To be added',
+        'To be added',
+        'To be added',
+      ]"
+      websiteUrl="https://www.docusign.com/"
+    />
+      <JobCard
+      logo="/assets/epics.jpg"
+      company="epics@ASU"
+      role="Software Engineer"
+      startDate="Jan. 2025"
+      endDate="Present"
+      location="Tempe, Arizona, United States"
+      :technologies="[]"
+      :bulletPoints="[
+        'To be added',
+        'To be added',
+        'To be added',
+      ]"
+      websiteUrl="https://www.docusign.com/"
+    />
     <JobCard
       logo="/assets/soda.svg"
       company="The Software Developer's Association"
@@ -15,6 +43,7 @@ import JobCard from '@/components/JobCard.vue'
       startDate="Oct. 2024"
       endDate="Present"
       location="Tempe, Arizona, United States"
+      :technologies="['Vue.js', 'JavaScript', 'Node.js', 'Express.js', 'MongoDB']"
       :bulletPoints="[
         'Selected as the top-performing team to present project outcomes at a company-wide event, showcasing the\n'+
         'messaging platform to an audience of over 100 attendees including industry professionals',
@@ -39,6 +68,7 @@ import JobCard from '@/components/JobCard.vue'
         'Monitor and respond to incoming safety-related communications through LiveSafe dashboard, ensuring prompt assistance to campus community members',
         'Coordinate real-time transportation logistics while maintaining clear communication with dispatchers and passengers to optimize response times and service efficiency'
       ]"
+      :technologies="['Python', 'Selenium', 'Google Sheets API']"
       websiteUrl="https://www.asu.edu/"
     />
     <JobCard
@@ -56,6 +86,7 @@ import JobCard from '@/components/JobCard.vue'
         'Enhanced cross-team collaboration and knowledge sharing by creating comprehensive documentation for RPA\n'+
         'solutions, including process design documents and user guides, facilitating smooth handovers to operations teams'
       ]"
+      :technologies="['BluePrism', 'Python', 'RPA']"
       websiteUrl="https://www.bannerhealth.com/"
     />
     <JobCard
@@ -70,36 +101,42 @@ import JobCard from '@/components/JobCard.vue'
         'Collaborated on district-wide initiative to repair and maintain school-issued Chromebooks, ensuring optimal functionality for educational use',
         'Managed inventory of PC components, including organizing new shipments and maintaining stock levels for future computer assembly projects'
       ]"
+      :technologies="['IT', 'Operating Systems', 'Hardware']"
       websiteUrl="https://dysart.org/mainsite"
     />
-  </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
-.work-title {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  font-family: 'Gilroy Bold', serif;
-  font-size: 38px;
-  color: #eaecef;
+.work-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.work-section {
+.work-title {
+  text-align: center;
+  font-family: 'Gilroy Bold', serif;
+  font-size: 2.5rem;
+  color: #eaecef;
+  margin-bottom: 3rem;
+}
+
+.jobs-container {
+  display: flex;
   flex-direction: column;
-  max-width: 1250px;
-  border-left: 4px solid rgba(127, 159, 220, 0.3);
-  margin: 0 auto;
-  padding: 0 2rem;
+  gap: 1.5rem;
 }
 
 @media (max-width: 768px) {
   .work-section {
-    margin: 0;
-    padding: 0 1rem;
-    border-left: none;
+    padding: 2rem 1rem;
+  }
+
+  .work-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
 }
 </style>

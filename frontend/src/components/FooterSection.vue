@@ -5,133 +5,129 @@ const openEmail = () => {
 </script>
 
 <template>
-  <div class="footer-container">
-    <div class="footer-title">Get In Touch</div>
-    <p class="footer-text">
-      If you have any inquiries or would like to collaborate, feel free to reach out to me on LinkedIn or send me an email using the button below.
-    </p>
-    <button class="contact-button" @click="openEmail">
-      Contact
-    </button>
-    <div class="footer-bottom">
-      <p class="copyright">Built by Joseph Holm</p>
-      <div class="source-code">
-        <img src="/assets/github.svg" alt="GitHub" class="github-icon"/>
-        <a href="https://github.com/Hololm/portfolio" target="_blank">
-          Source Code - GitHub
+  <footer class="footer">
+    <div class="content">
+      <h2 class="title">Let's Work Together</h2>
+      <p class="description">
+        Whether you have a project in mind or just want to connect,
+        I'm always open to new opportunities and conversations.
+      </p>
+
+      <button @click="openEmail" class="contact-button">
+        Get in Touch
+      </button>
+
+      <div class="bottom">
+        <div class="credit">
+          <span>2025 Joseph Holm</span>
+          <span>Built with Vue.js</span>
+        </div>
+
+        <a href="https://github.com/Hololm/portfolio" target="_blank" class="source">
+          <img src="/assets/github.svg" alt="GitHub" />
+          Source Code
         </a>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <style scoped>
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 1rem;
+.footer {
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 4rem 2rem;
+  margin-top: 4rem;
 }
 
-.footer-title {
-  padding-top: 60px;
-  padding-bottom: 20px; /* Reduced from 60px */
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  font-family: 'Gilroy Bold', serif;
-  font-size: 38px;
-  color: #eaecef;
-}
-
-.footer-text {
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-family: 'Gilroy Bold';
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.8);
   max-width: 600px;
-  color: #8b949e;
-  font-family: 'Gilroy Regular', serif;
-  font-size: 18px;
-  margin-bottom: 3rem;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
 }
 
 .contact-button {
-  font-family: 'Gilroy Medium', serif;
-  border-radius: 4px;
-  color: white;
-  font-size: 20px;
-  background: transparent;
-  border: 2px solid #88ABEC;
-  padding: 16px 48px;
+  font-family: "Gilroy Bold", serif;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
   cursor: pointer;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+  background: rgba(78, 205, 196, 0.1);
+  color: #4ECDC4;
+  border: 1px solid rgba(78, 205, 196, 0.3);
+  transition: all 0.3s ease;
 }
 
-.footer-bottom {
+.contact-button:hover {
+  background: rgba(78, 205, 196, 0.2);
+  transform: translateY(-2px);
+}
+
+.bottom {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.credit {
+  display: flex;
+  gap: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.source {
+  display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-.copyright {
-  color: #8b949e;
-  font-family: 'Gilroy Regular', serif;
-  font-size: 14px;
-  margin-bottom: 0.5rem;
-}
-
-.source-code {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.github-icon {
-  width: 16px;
-  height: 16px;
-  filter: invert(56%) sepia(12%) saturate(343%) hue-rotate(176deg) brightness(91%) contrast(86%);
-}
-
-.source-code a {
-  color: #8b949e;
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
-  font-family: 'Gilroy Regular', serif;
-  font-size: 14px;
+  transition: color 0.3s ease;
 }
 
-.source-code a:hover {
-  color: #eaecef;
+.source:hover {
+  color: #4ECDC4;
+}
+
+.source img {
+  width: 20px;
+  height: 20px;
 }
 
 @media (max-width: 768px) {
-  .footer-container {
-    padding: 0 1rem 1.5rem;
+  .footer {
+    padding: 3rem 1rem;
   }
 
-  .footer-title {
-    font-size: 28px;
-    padding-top: 30px;
-    padding-bottom: 15px;
+  .title {
+    font-size: 2rem;
   }
 
-  .footer-text {
-    font-size: 15px;
-    padding: 0;
-    margin-bottom: 1.5rem;
+  .bottom {
+    flex-direction: column;
+    gap: 1rem;
   }
 
-  .contact-button {
-    font-size: 16px;
-    padding: 12px 32px;
-    margin-bottom: 3rem;
-  }
-
-  .copyright, .source-code a {
-    font-size: 13px;
-  }
-
-  .github-icon {
-    width: 14px;
-    height: 14px;
+  .credit {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
 </style>

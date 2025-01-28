@@ -19,30 +19,35 @@ import FooterSection from "@/components/FooterSection.vue"
 </template>
 
 <style>
-
-/* Fade animation for navbar */
-.fade-enter-active {
-  transition: opacity 0.6s ease;
+:root {
+  --primary-bg: #0a0a0a;
+  --secondary-bg: #1a1a1a;
+  --accent: #4ECDC4;
+  --accent-secondary: #FF6B6B;
+  --text-primary: #F4F4F4;
+  --text-secondary: #888;
+  --card-bg: rgba(255, 255, 255, 0.05);
 }
 
-.fade-enter-from {
+body {
+  background: var(--primary-bg);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
-}
-
-/* Slide and fade animation for main content */
-.slide-fade-enter-active {
-  transition: all 0.8s ease-out;
-}
-
-.slide-fade-enter-from {
-  opacity: 0;
-  transform: translateY(30px);
 }
 
 ::-webkit-scrollbar {
-    display: block;
-    width: 5px;
-  border-radius: 5px;
+  width: 8px;
+  background: var(--primary-bg);
 }
 
 ::-webkit-scrollbar-track {
@@ -50,8 +55,8 @@ import FooterSection from "@/components/FooterSection.vue"
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(109, 119, 140);
-  border-radius: 5px;
+  background: var(--accent);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-track-piece:end {
@@ -60,5 +65,14 @@ import FooterSection from "@/components/FooterSection.vue"
 
 ::-webkit-scrollbar-track-piece:start {
     background: transparent;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
 }
 </style>

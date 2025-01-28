@@ -1,14 +1,14 @@
+<!-- ExperienceSection.vue -->
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import ProjectComponent from '@/components/ProjectComponent.vue'
 </script>
+
 <template>
-  <div>
-  <div class="experience-title">
-    My Projects
-  </div>
-  <div class="experience-container">
-    <!-- Project 1-->
+  <section class="experience-section">
+    <h2 class="experience-title">Featured Projects</h2>
+    <div class="experience-container">
+          <!-- Project 1-->
     <ProjectComponent
     title="Lighthouse"
       :description="[
@@ -77,55 +77,42 @@ import ProjectComponent from '@/components/ProjectComponent.vue'
       devpostLink="https://devpost.com/software/findit-lhqfgr"
     />
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
+.experience-section {
+  padding: 4rem 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
 .experience-title {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   font-family: 'Gilroy Bold', serif;
-  font-size: 38px;
+  font-size: 2.5rem;
   color: #eaecef;
+  margin-bottom: 3rem;
 }
 
 .experience-container {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  width: 100%;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-.project-tech span {
-  color: #88ABEC;
-  font-size: 14px;
-  font-family: "Gilroy Medium", serif;
-}
-
-.project-image img {
-  width: 100%;
-  border-radius: 4px;
-  transition: transform 0.3s ease;
-  z-index: 0;
-}
-
-.project-image:hover img {
-  transform: translateY(-5px);
-}
 @media (max-width: 768px) {
-  .experience-container {
-    padding: 0 1rem;
+  .experience-section {
+    padding: 2rem 1rem;
   }
 
   .experience-title {
-    padding: 40px 1rem;
-    font-size: 32px;
-    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .experience-container {
+    gap: 2rem;
   }
 }
 </style>

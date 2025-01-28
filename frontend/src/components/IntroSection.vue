@@ -19,173 +19,269 @@ onMounted(() => {
 </script>
 
 <template>
-<div class="layout-container">
-    <div class="intro-container">
-      <div class="greeting">Hi, my name is</div>
-      <h1 class="name">Joseph Holm.</h1>
-      <div class="title">Full-Stack Developer at ASU</div>
-      <p class="description">
-        I'm a sophomore at ASU pursuing a degree in Computer Science.
-        I'm passionate about building impactful, innovative software
-        and I'm always down for a good hackathon every now and then.
-        <br><br>
-        In my spare time when I'm not coding,
-        you'll find me reading books, watching movies or TV shows, or playing badminton and volleyball.
-      </p>
-      <button @click="openResume" class="resume-button">Check out my resume!</button>
-    </div>
-    <div class="photo-container">
-      <div class="placeholder-photo">
-        <img src="/assets/me2.jpg" alt="Photo"/>
+  <section class="intro-section">
+    <div class="full-width-bg">
+    <div class="content-wrapper">
+      <div class="text-content">
+        <div class="header-group">
+          <h1 class="name">Joseph Holm</h1>
+          <h2 class="title">Incoming SWE Intern @ Docusign</h2>
+        </div>
+
+        <div class="bio-section">
+          <p class="greeting">Building digital solutions with</p>
+          <div class="tech-highlights">
+            <span class="tech-tag">Vue.js</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">MongoDB</span>
+          </div>
+        </div>
+
+        <p class="description">
+          I'm a Computer Science student at ASU passionate about creating impactful software solutions.
+          I'm also always down for a good hackathon every now and then.
+        </p>
+        <p class="description">
+          In my spare time when I'm not coding,
+          you'll find me reading books, watching movies and TV shows, or playing badminton and volleyball.
+        </p>
+
+        <div class="action-buttons">
+          <button @click="openResume" class="resume-button">
+            View Resume
+            <span class="button-icon">→</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="avatar-container">
+        <div class="avatar-frame">
+          <img src="/assets/me2.jpg" alt="Joseph Holm" class="avatar-image" />
+          <div class="avatar-overlay"></div>
+        </div>
       </div>
     </div>
-  </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
-.layout-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1250px;
+.intro-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(to bottom, #0a0a0a 0%, #1a1a1a 100%);
+}
+.content-wrapper {
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0 2rem;
-  min-height: 80vh;
-}
-
-.intro-container {
-  border-left: 4px solid rgba(127, 159, 220, 0.3);
-  padding-left: 30px;
-  flex: 0 1 60%; /* Adjust the flex-basis to control width */
-}
-
-.photo-container {
-  flex: 0 1 35%; /* Adjust the flex-basis to control width */
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
   align-items: center;
-  position: relative;
 }
 
-.placeholder-photo {
+.text-content {
   position: relative;
   z-index: 2;
-  aspect-ratio: 1;
 }
 
-.placeholder-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  position: relative;
-}
-
-
-.greeting {
-  font-size: 28px;
-  background: linear-gradient(to right, #88ABEC 0%, #3158CF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 6px;
-  font-family: "Gilroy Regular", serif;
+.header-group {
+  margin-bottom: 2.5rem;
 }
 
 .name {
-  font-size: 96px;
-  font-weight: bold;
+  font-size: 4rem;
   color: #eaecef;
   margin: 0;
-  line-height: 1.1;
-  letter-spacing: -2px;
-  font-family: "Gilroy Bold", serif;
+  line-height: 1;
+  font-family: 'Gilroy Bold', serif;
+  position: relative;
+  display: inline-block;
+}
+
+.name::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: #4ECDC4;
 }
 
 .title {
-  font-size: 36px;
-  background: linear-gradient(to right, #88ABEC 0%, #3158CF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 1;
-  margin-top: 8px;
-  margin-bottom: 32px;
-  font-family: "Gilroy Medium", serif;
+  font-size: 1.5rem;
+  color: #bcc6d1;
+  margin: 1rem 0 0;
+  font-family: 'Gilroy Medium', serif;
+}
+
+.bio-section {
+  margin-bottom: 2.5rem;
+}
+
+.greeting {
+  font-size: 1.25rem;
+  color: #8b949e;
+  margin-bottom: 1rem;
+  font-family: 'Gilroy Regular', serif;
+}
+
+.tech-highlights {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  background: rgba(78, 205, 196, 0.1);
+  color: #4ECDC4;
+  padding: 0.5rem 1.25rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  border: 1px solid rgba(78, 205, 196, 0.3);
+  font-family: 'Gilroy Medium', serif;
 }
 
 .description {
-  font-size: 20px;
-  line-height: 1.6;
-  color: #f8f8fa;
-  opacity: 0.92;
-  max-width: 650px;
-  font-family: "Gilroy Regular", serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #bcc6d1;
+  max-width: 600px;
+  margin-bottom: 3rem;
+  font-family: 'Gilroy Regular', serif;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1.5rem;
 }
 
 .resume-button {
-  font-family: 'Gilroy Medium', serif;
-  border-radius: 4px;
-  color: white;
-  font-size: 20px;
-  background: transparent;
-  border: 0.1rem solid #88ABEC;
-  padding: 16px 24px;
-  position: relative;
+  background: #4ECDC4;
+  color: #0a0a0a;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
   cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Gilroy Medium', serif;
 }
 
 .resume-button:hover {
-  cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+}
+
+.button-icon {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.resume-button:hover .button-icon {
+  transform: translateX(3px);
+}
+
+.avatar-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-frame {
+  width: 400px;
+  height: 400px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.avatar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(78, 205, 196, 0.1) 0%, rgba(78, 205, 196, 0) 100%);
+  pointer-events: none;
+}
+
+.avatar-frame:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 1200px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .header-group {
+    text-align: center;
+  }
+
+  .name::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .tech-highlights {
+    justify-content: center;
+  }
+
+  .action-buttons {
+    justify-content: center;
+  }
+
+  .avatar-container {
+    order: -1;
+  }
+
+  .avatar-frame {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
-  .intro-container {
-    border-left: none;
-    padding-left: 0;
-    text-align: center;
-  }
-
-  .layout-container {
-    flex-direction: column-reverse;
-    padding: 1rem;
-    justify-content: center;
-    min-height: auto;
-    gap: 2rem; /* Reduce gap for mobile view */
-  }
-  .intro-container {
-    padding-right: 0;
-    margin-top: 2rem;
-    text-align: center;
-    position: relative;
-  }
-
-  .description {
-    margin: 0 auto;
-  }
-
-  .photo-container {
-    margin-left: 0; /* Remove left margin for mobile view */
-    margin-bottom: 2rem; /* Add bottom margin for separation in mobile view */
-  }
-
-  .placeholder-photo {
-    width: 300px;
-    height: 300px;
+  .intro-section {
+    padding: 4rem 1rem;
   }
 
   .name {
-    font-size: 48px;
-  }
-
-  .resume-button {
-    margin-top: 20px;
+    font-size: 2.5rem;
   }
 
   .title {
-    font-size: 24px;
+    font-size: 1.25rem;
   }
 
-  .greeting {
-    font-size: 24px;
+  .description {
+    font-size: 1rem;
+  }
+
+  .avatar-frame {
+    width: 250px;
+    height: 250px;
+  }
+
+  .resume-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
   }
 }
 </style>

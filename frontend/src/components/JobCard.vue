@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+
 defineProps<{
   logo: string
   company: string
@@ -8,166 +10,209 @@ defineProps<{
   location: string
   bulletPoints: string[]
   websiteUrl: string
+  technologies?: string[]
 }>()
 
-const openWork = (website: string) => {
-  window.open(website, '_blank');
+const openWork = (website: string, event: Event) => {
+  event.stopPropagation()
+  window.open(website, '_blank')
 }
 </script>
 
 <template>
-  <div class="work-container">
-    <div class="job-header">
-      <div class="logo-container">
-        <div class="logo-background">
-          <img @click="openWork(websiteUrl)"
-               :src="logo"
-               :alt="company"
-               class="logo-icon"
-               style="cursor: pointer;"/>
-        </div>
-        <div class="job-info">
-          <div class="job-title">{{ company }}</div>
-          <div class="job-company">{{ role }}</div>
-          <div class="job-duration">{{ startDate }} - {{ endDate }}</div>
-          <div class="job-location">{{ location }}</div>
-        </div>
+  <div class="job-card">
+    <div class="timeline">
+      <div class="date">{{ startDate }} - {{ endDate }}</div>
+      <div class="logo-container" @click.stop="openWork(websiteUrl, $event)">
+        <img :src="logo" :alt="company" class="company-logo"/>
       </div>
     </div>
-    <div class="bullet-points">
-      <div class="bullet-point" v-for="(point, index) in bulletPoints" :key="index">
-        <div class="bullet-content">{{ point }}</div>
+
+    <div class="content">
+      <h3 class="company">{{ company }}</h3>
+      <div class="role-location">
+        <span class="role">{{ role }}</span>
+        <span class="location">{{ location }}</span>
+      </div>
+
+      <div class="details">
+        <div v-for="(point, index) in bulletPoints" :key="index" class="bullet">
+          <div class="bullet-icon"></div>
+          <p class="bullet-text">{{ point }}</p>
+        </div>
+      </div>
+
+      <div v-if="technologies" class="tech-stack">
+        <span v-for="tech in technologies" :key="tech" class="tech-tag">
+          {{ tech }}
+        </span>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.work-container {
-  margin-bottom: 2rem;
-  padding-left: 2rem;
-  width: 100%;
-  box-sizing: border-box;
-  overflow-x: hidden;
+.job-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  background: rgba(30, 30, 30, 0.6);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.job-header {
-  margin-bottom: 1.5rem;
+.job-card:hover {
+  transform: translateY(-5px);
+  border-color: #4ECDC4;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.logo-container {
+.timeline {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 
-.job-company {
-  background: linear-gradient(to right, #88ABEC 0%, #5087ea 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: 'Gilroy Medium', serif;
-  font-size: 1.1rem
+.date {
+  color: #bdc3cb;
+  font-family: 'Gilroy Medium';
+  font-size: 1rem;
+  text-align: center;
+  white-space: nowrap;
 }
 
-.logo-background {
-  width: 64px;
-  height: 64px;
-  background: #ffffff;
-  border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  flex-shrink: 0;
+.logo-container {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.logo-icon {
+.logo-container:hover {
+  transform: scale(1.05);
+}
+
+.company-logo {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.job-info {
+.content {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  font-family: 'Gilroy Regular', serif;
+  gap: 0.5rem;
 }
 
-.job-title {
+.company {
+  font-size: 1.5rem;
   color: #eaecef;
-  font-family: 'Gilroy Bold', serif;
-  font-size: 1.4rem;
+  margin: 0;
+  font-family: 'Gilroy Bold';
 }
 
-.job-duration, .job-location {
-  color: #bcc6d1;
-  font-size: 0.9rem;
-  font-family: 'Gilroy Regular', serif;
-}
-
-.bullet-points {
-  position: relative;
-  font-family: 'Gilroy Regular', serif;
-  max-width: 800px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.bullet-point {
-  position: relative;
-  padding-left: 2rem;
+.role-location {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
   margin-bottom: 1rem;
-  color: #dae0e8;
 }
 
-.bullet-point::after {
-  content: '';
-  position: absolute;
-  left: 0.5rem;
-  top: 0.6rem;
-  width: 6px;
-  height: 6px;
-  border-top: 2px solid #88ABEC;
-  border-right: 2px solid #88ABEC;
+.role {
+  color: #4ECDC4;
+  font-family: 'Gilroy Medium';
+  font-size: 1rem;
+}
+
+.location {
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+.details {
+  margin-top: 0.5rem;
+}
+
+.bullet {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.bullet-icon {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  background: #4ECDC4;
   transform: rotate(45deg);
+  margin-top: 0.5rem;
 }
 
-.bullet-content {
+.bullet-text {
+  margin: 0;
   line-height: 1.6;
+  color: #bcc6d1;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.tech-tag {
+  background: rgba(78, 205, 196, 0.1);
+  color: #4ECDC4;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(78, 205, 196, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(78, 205, 196, 0.2);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
-  .work-container {
-    padding: 0 0.5rem;
+  .job-card {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .timeline {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .logo-container {
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+  }
+
+  .role-location {
     flex-direction: column;
-    align-items: center;
-  }
-
-  .job-info {
-    align-items: center;
-    text-align: center;
-    padding: 0.5rem 0;
-  }
-
-  .bullet-points {
-    padding: 0 0.5rem;
-  }
-
-  .bullet-point {
-    padding-left: 1.5rem;
-  }
-
-  .bullet-point::after {
-    left: 0.25rem;
-  }
-
-  .job-duration, .job-location {
-    text-align: center;
+    align-items: flex-start;
+    gap: 0.25rem;
   }
 }
 </style>

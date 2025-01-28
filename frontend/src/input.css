@@ -22,10 +22,3 @@
   font-weight: normal;
   font-style: normal;
 }
-
-html {
-  background: linear-gradient(135deg, #0b1119 0%, #212c40 100%);
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-}
