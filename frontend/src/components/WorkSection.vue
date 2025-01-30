@@ -12,7 +12,7 @@ import JobCard from '@/components/JobCard.vue'
       role="Incoming Software Engineering Intern"
       startDate="Jun. 2025"
       endDate="Aug. 2025"
-      location="SF Bay Area, California, United States"
+      location="San Francisco, CA"
       :technologies="[]"
       :bulletPoints="[
         'To be added',
@@ -27,14 +27,14 @@ import JobCard from '@/components/JobCard.vue'
       role="Software Engineer"
       startDate="Jan. 2025"
       endDate="Present"
-      location="Tempe, Arizona, United States"
+      location="Tempe, AZ"
       :technologies="[]"
       :bulletPoints="[
         'To be added',
         'To be added',
         'To be added',
       ]"
-      websiteUrl="https://www.docusign.com/"
+      websiteUrl="https://epics.engineering.asu.edu/"
     />
     <JobCard
       logo="/assets/soda.svg"
@@ -42,7 +42,7 @@ import JobCard from '@/components/JobCard.vue'
       role="Software Development Intern"
       startDate="Oct. 2024"
       endDate="Present"
-      location="Tempe, Arizona, United States"
+      location="Tempe, AZ"
       :technologies="['Vue.js', 'JavaScript', 'Node.js', 'Express.js', 'MongoDB']"
       :bulletPoints="[
         'Selected as the top-performing team to present project outcomes at a company-wide event, showcasing the\n'+
@@ -62,7 +62,7 @@ import JobCard from '@/components/JobCard.vue'
       role="Safety Escort Associate"
       startDate="Sep. 2024"
       endDate="Present"
-      location="Tempe, Arizona, United States"
+      location="Tempe, AZ"
       :bulletPoints="[
         'Provide safe transportation services across campus while maintaining detailed digital records of routes, pick-up/drop-off times, and passenger data through Google Sheets',
         'Monitor and respond to incoming safety-related communications through LiveSafe dashboard, ensuring prompt assistance to campus community members',
@@ -77,7 +77,7 @@ import JobCard from '@/components/JobCard.vue'
       role="Software Engineer Intern"
       startDate="Mar. 2023"
       endDate="May 2023"
-      location="Surprise, Arizona, United States"
+      location="Surprise, AZ"
       :bulletPoints="[
         'Improved automation efficiency for healthcare workflows, resulting in a 25% reduction in manual data entry errors\n'+
         'through the implementation of 5 new RPA processes',
@@ -95,7 +95,7 @@ import JobCard from '@/components/JobCard.vue'
       role="Computer Systems Maintenance Assistant"
       startDate="Jan. 2023"
       endDate="Apr. 2023"
-      location="Surprise, Arizona, United States"
+      location="Surprise, AZ"
       :bulletPoints="[
         'Diagnosed and repaired aging computers to enhance performance, utilizing systematic troubleshooting methods and research to resolve complex technical issues',
         'Collaborated on district-wide initiative to repair and maintain school-issued Chromebooks, ensuring optimal functionality for educational use',

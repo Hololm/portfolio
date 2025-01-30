@@ -20,22 +20,11 @@ onMounted(() => {
 
 <template>
   <section class="intro-section">
-    <div class="full-width-bg">
     <div class="content-wrapper">
       <div class="text-content">
         <div class="header-group">
           <h1 class="name">Joseph Holm</h1>
           <h2 class="title">Incoming SWE Intern @ Docusign</h2>
-        </div>
-
-        <div class="bio-section">
-          <p class="greeting">Building digital solutions with</p>
-          <div class="tech-highlights">
-            <span class="tech-tag">Vue.js</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">MongoDB</span>
-          </div>
         </div>
 
         <p class="description">
@@ -62,22 +51,24 @@ onMounted(() => {
         </div>
       </div>
     </div>
-    </div>
   </section>
 </template>
 
 <style scoped>
 .intro-section {
-  padding: 6rem 2rem;
+  width: 100%;
+  padding: 6rem 0;
   background: linear-gradient(to bottom, #0a0a0a 0%, #1a1a1a 100%);
+  position: relative;
 }
+
 .content-wrapper {
   max-width: 1300px;
   margin: 0 auto;
+  padding: 0 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  align-items: center;
 }
 
 .text-content {
@@ -102,7 +93,7 @@ onMounted(() => {
 .name::after {
   content: '';
   position: absolute;
-  bottom: -8px;
+  bottom: -10px;
   left: 0;
   width: 60%;
   height: 3px;
@@ -110,45 +101,18 @@ onMounted(() => {
 }
 
 .title {
-  font-size: 1.5rem;
-  color: #bcc6d1;
+  font-size: 1.8rem;
+  color: #eaecef;
   margin: 1rem 0 0;
   font-family: 'Gilroy Medium', serif;
 }
 
-.bio-section {
-  margin-bottom: 2.5rem;
-}
-
-.greeting {
-  font-size: 1.25rem;
-  color: #8b949e;
-  margin-bottom: 1rem;
-  font-family: 'Gilroy Regular', serif;
-}
-
-.tech-highlights {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.tech-tag {
-  background: rgba(78, 205, 196, 0.1);
-  color: #4ECDC4;
-  padding: 0.5rem 1.25rem;
-  border-radius: 20px;
-  font-size: 1rem;
-  border: 1px solid rgba(78, 205, 196, 0.3);
-  font-family: 'Gilroy Medium', serif;
-}
-
 .description {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.7;
   color: #bcc6d1;
   max-width: 600px;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-family: 'Gilroy Regular', serif;
 }
 

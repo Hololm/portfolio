@@ -11,6 +11,7 @@ interface Props {
   imageAlt?: string;
   githubLink?: string;
   devpostLink?: string;
+  youtubeLink?: string;
 }
 
 const props = defineProps<Props>();
@@ -42,6 +43,9 @@ const props = defineProps<Props>();
         </a>
         <a v-if="devpostLink" :href="devpostLink" target="_blank" class="link">
           <img src="/assets/devpost.svg" alt="DevPost" class="devpost-icon" />
+        </a>
+        <a v-if="youtubeLink" :href="youtubeLink" target="_blank" class="link">
+          <img src="/assets/youtube.svg" alt="YouTube" class="youtube-icon" />
         </a>
       </div>
     </div>
@@ -136,7 +140,7 @@ const props = defineProps<Props>();
 .link {
   width: 32px;
   height: 32px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   opacity: 0.8;
 }
 
@@ -144,16 +148,40 @@ const props = defineProps<Props>();
   width: 28px;
   height: 28px;
   filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+}
+
+.github-icon:hover {
+  filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(78, 205, 196, 0.3));
+  transform: scale(1.1);
 }
 
 .devpost-icon {
   width: 28px;
   height: 28px;
-  /* Remove the filter for devpost icon */
+  transition: all 0.3s ease;
 }
 
+.devpost-icon:hover {
+  filter: drop-shadow(0 2px 4px rgba(106, 216, 106, 0.3));
+  transform: scale(1.1);
+}
+
+.youtube-icon {
+  width: 34px;
+  height: 34px;
+  filter: drop-shadow(0 2px 4px rgba(255, 0, 0, 0.2));
+  transition: all 0.3s ease;
+}
+
+.youtube-icon:hover {
+  filter: drop-shadow(0 4px 8px rgba(255, 0, 0, 0.3));
+  transform: scale(1.1);
+}
+
+/* Remove the link hover transform since we're handling it on icons */
 .link:hover {
-  transform: translateY(-2px);
+  transform: none;
   opacity: 1;
 }
 

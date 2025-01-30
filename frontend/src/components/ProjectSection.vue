@@ -1,4 +1,4 @@
-<!-- ExperienceSection.vue -->
+<!-- ProjectSection.vue -->
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import ProjectComponent from '@/components/ProjectComponent.vue'
@@ -53,6 +53,7 @@ import ProjectComponent from '@/components/ProjectComponent.vue'
       imageAlt="Trustify project"
       githubLink="https://github.com/Hololm/hacksoda-2024"
       devpostLink="https://devpost.com/software/trustify-ul8n07"
+      youtubeLink="https://www.youtube.com/"
     />
     <!-- Project 3-->
     <ProjectComponent

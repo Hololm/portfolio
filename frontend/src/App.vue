@@ -30,19 +30,11 @@ import FooterSection from "@/components/FooterSection.vue"
 }
 
 body {
+  margin: 0; /* Add this line */
+  padding: 0; /* Add this line */
   background: var(--primary-bg);
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
 }
 
 ::-webkit-scrollbar {

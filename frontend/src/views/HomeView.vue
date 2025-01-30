@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import IntroSection from '@/components/IntroSection.vue'
-import DownArrow from '@/components/DownArrow.vue'
-import ExperienceSection from '@/components/ExperienceSection.vue'
+import ExperienceSection from '@/components/ProjectSection.vue'
 import WorkSection from '@/components/WorkSection.vue'
 import TechSection from '@/components/TechSection.vue'
 
@@ -20,5 +19,5 @@ const goToAbout = () => {
   <TechSection />
 </template>
 
-<style scoped>
+<style>
 </style>
