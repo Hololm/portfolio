@@ -160,6 +160,7 @@ const props = defineProps<Props>();
   width: 28px;
   height: 28px;
   transition: all 0.3s ease;
+  transform: translateY(1px);
 }
 
 .devpost-icon:hover {
@@ -168,15 +169,23 @@ const props = defineProps<Props>();
 }
 
 .youtube-icon {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   filter: drop-shadow(0 2px 4px rgba(255, 0, 0, 0.2));
+  transform: translateY(-1px);
   transition: all 0.3s ease;
 }
 
 .youtube-icon:hover {
   filter: drop-shadow(0 4px 8px rgba(255, 0, 0, 0.3));
   transform: scale(1.1);
+}
+
+.github-icon,
+.devpost-icon,
+.youtube-icon {
+  vertical-align: middle;
+  display: inline-block;
 }
 
 /* Remove the link hover transform since we're handling it on icons */

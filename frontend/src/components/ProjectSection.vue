@@ -29,6 +29,7 @@ import ProjectComponent from '@/components/ProjectComponent.vue'
       imageSrc="/assets/sodamentorship.png"
       imageAlt="WHY IS THIS NOT WORKING VERCEL"
       githubLink="https://github.com/Hololm/reverse-beeper"
+      youtubeLink="https://youtu.be/039H_4pYU3U"
     />
 
     <!-- Project 2-->
@@ -53,7 +54,6 @@ import ProjectComponent from '@/components/ProjectComponent.vue'
       imageAlt="Trustify project"
       githubLink="https://github.com/Hololm/hacksoda-2024"
       devpostLink="https://devpost.com/software/trustify-ul8n07"
-      youtubeLink="https://www.youtube.com/"
     />
     <!-- Project 3-->
     <ProjectComponent
@@ -76,6 +76,7 @@ import ProjectComponent from '@/components/ProjectComponent.vue'
       gradientEnd="rgba(176,133,226,0.8)"
       githubLink="https://github.com/ZacharyHampton/sunhacks-2024"
       devpostLink="https://devpost.com/software/findit-lhqfgr"
+      youtubeLink="https://www.youtube.com/watch?v=18lt6lk4K2E&ab_channel=SBBillusionist"
     />
     </div>
   </section>
