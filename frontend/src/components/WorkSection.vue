@@ -57,7 +57,7 @@ import JobCard from '@/components/JobCard.vue'
       endDate="May 2023"
       location="Surprise, AZ"
       :bulletPoints="[
-          'Minimized manual data entry errors by 25\\% by automating healthcare workflows using BluePrism',
+          'Minimized manual data entry errors by 25% by automating healthcare workflows using BluePrism',
           'Cut development time from 3 to 1.5 weeks by creating reusable BluePrism templates and schemas',
           'Built comprehensive RPA documentation enabling seamless operations team handoffs'
       ]"
