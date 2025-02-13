@@ -24,7 +24,7 @@ onMounted(() => {
       <div class="text-content">
         <div class="header-group">
           <h1 class="name">Joseph Holm</h1>
-          <h2 class="title">Incoming SWE Intern @ Docusign</h2>
+          <h2 class="title">Software Engineer</h2>
         </div>
 
         <p class="description">
@@ -56,14 +56,14 @@ onMounted(() => {
 
 <style scoped>
 .intro-section {
-  width: 100%;
   padding: 6rem 0;
-  background: linear-gradient(to bottom, #0a0a0a 0%, #1a1a1a 100%);
+  background: radial-gradient(#0a0a0a 0%, #090909 100%);
   position: relative;
+  overflow-x: hidden;
 }
 
 .content-wrapper {
-  max-width: 1300px;
+  max-width: calc(100% - 24rem);
   margin: 0 auto;
   padding: 0 2rem;
   display: grid;
@@ -163,6 +163,7 @@ onMounted(() => {
   overflow: hidden;
   position: relative;
   transition: transform 0.3s ease;
+  max-width: 100%;
 }
 
 .avatar-image {
@@ -191,10 +192,16 @@ onMounted(() => {
     grid-template-columns: 1fr;
     gap: 3rem;
     text-align: center;
+    padding: 0 1rem; /* Reduce side padding */
+    max-width: 100%;
   }
 
   .header-group {
     text-align: center;
+  }
+
+  .name {
+    word-break: keep-all; /* Prevent long text overflow */
   }
 
   .name::after {

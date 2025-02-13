@@ -21,8 +21,6 @@ import ProjectComponent from '@/components/ProjectComponent.vue'
         { name: 'Python' },
         { name: 'Node.js' },
         { name: 'Express.js' },
-        { name: 'Vite' },
-        { name: 'MongoDB' }
       ]"
       gradientStart="rgba(88,94,240,0.7)"
       gradientEnd="rgba(40,47,150,1)"
@@ -41,12 +39,9 @@ import ProjectComponent from '@/components/ProjectComponent.vue'
       ]"
     :reverse="true"
       :technologies="[
-        { name: 'MongoDB' },
-        { name: 'FastAPI' },
-        { name: 'Node.js' },
-        { name: 'Python' },
-        { name: 'JavaScript' },
         { name: 'Vue.js' },
+        { name: 'Node.js' },
+        { name: 'JavaScript' },
       ]"
       gradientStart="rgb(52,211,153,0.8)"
       gradientEnd="rgba(35,197,94,0.8)"
@@ -67,7 +62,6 @@ import ProjectComponent from '@/components/ProjectComponent.vue'
         { name: 'JavaScript' },
         { name: 'Python' },
         { name: 'FastAPI' },
-        { name: 'Vite' },
         { name: 'MongoDB' }
       ]"
       imageSrc="/assets/findit.png"
@@ -84,8 +78,10 @@ import ProjectComponent from '@/components/ProjectComponent.vue'
 
 <style scoped>
 .experience-section {
-  padding: 4rem 2rem;
-  max-width: 1300px;
+  padding: 4rem 24rem;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
   margin: 0 auto;
 }
 
@@ -101,11 +97,13 @@ import ProjectComponent from '@/components/ProjectComponent.vue'
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  overflow-x: hidden; /* Hide horizontal overflow */
 }
 
 @media (max-width: 768px) {
   .experience-section {
     padding: 2rem 1rem;
+    width: 100%;
   }
 
   .experience-title {
@@ -115,6 +113,10 @@ import ProjectComponent from '@/components/ProjectComponent.vue'
 
   .experience-container {
     gap: 2rem;
+  }
+  .project-component {
+    flex-direction: column;
+    padding: 1rem;
   }
 }
 </style>

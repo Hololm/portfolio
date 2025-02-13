@@ -6,27 +6,36 @@ import FooterSection from "@/components/FooterSection.vue"
 
 <template>
   <div>
-    <Transition name="fade" appear>
-      <NavBar />
-    </Transition>
     <Transition name="slide-fade" appear>
       <RouterView />
-    </Transition>
-    <Transition name="fade" appear>
-      <FooterSection />
     </Transition>
   </div>
 </template>
 
 <style>
 :root {
-  --primary-bg: #0a0a0a;
+  --primary-bg: #020202;
   --secondary-bg: #1a1a1a;
   --accent: #4ECDC4;
   --accent-secondary: #FF6B6B;
   --text-primary: #F4F4F4;
   --text-secondary: #888;
   --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
@@ -38,12 +47,12 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
   background: var(--primary-bg);
 }
 
 ::-webkit-scrollbar-track {
-    background: rgb(49, 55, 69);
+    background: rgb(14, 15, 17);
 }
 
 ::-webkit-scrollbar-thumb {

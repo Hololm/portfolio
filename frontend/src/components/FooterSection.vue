@@ -34,7 +34,7 @@ const openEmail = () => {
 
 <style scoped>
 .footer {
-  background: rgba(20, 20, 20, 0.95);
+  background: radial-gradient(#0a0a0a 0%, #090909 100%);
   backdrop-filter: blur(10px);
   padding: 4rem 2rem;
   margin-top: 4rem;

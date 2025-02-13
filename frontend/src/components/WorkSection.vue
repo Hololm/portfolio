@@ -69,9 +69,14 @@ import JobCard from '@/components/JobCard.vue'
 </template>
 
 <style scoped>
+.job-card {
+  box-sizing: border-box;
+  min-width: 0; /* Fix flexbox overflow */
+}
+
 .work-section {
-  padding: 4rem 2rem;
-  max-width: 1200px;
+  padding: 2rem 1rem;
+  max-width: calc(100% - 32rem);
   margin: 0 auto;
 }
 
@@ -87,11 +92,13 @@ import JobCard from '@/components/JobCard.vue'
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
   .work-section {
     padding: 2rem 1rem;
+    max-width: 100%;
   }
 
   .work-title {
