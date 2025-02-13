@@ -56,9 +56,10 @@ const openWork = (website: string, event: Event) => {
   display: grid;
   grid-template-columns: 180px 1fr;
   gap: 2rem;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 1000px;
+  padding: 1rem;
+  margin: 2rem auto; /* Center align */
+  max-width: 100%; /* Ensure cards take up the full width of their container */
+  width: calc(100% - 20rem); /* Add padding for responsiveness */
   background: rgba(30, 30, 30, 0.6);
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);

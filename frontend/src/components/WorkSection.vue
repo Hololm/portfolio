@@ -12,27 +12,25 @@ import JobCard from '@/components/JobCard.vue'
       role="Incoming Software Engineering Intern"
       startDate="Jun. 2025"
       endDate="Aug. 2025"
-      location="San Francisco, CA"
-      :technologies="[]"
+      location="San Francisco Bay Area, CA"
+      :technologies="['Node.js']"
       :bulletPoints="[
-        'To be added',
-        'To be added',
-        'To be added',
+        'Incoming summer 2025 ☀️',
+        'Platform team 🚀'
       ]"
       websiteUrl="https://www.docusign.com/"
     />
       <JobCard
       logo="/assets/epics.jpg"
       company="epics@ASU"
-      role="Software Engineer"
+      role="Backend Software Engineer"
       startDate="Jan. 2025"
       endDate="Present"
       location="Tempe, AZ"
-      :technologies="[]"
+      :technologies="['React Native', 'FastAPI', 'TypeScript', 'Python', 'PostgreSQL', 'AWS']"
       :bulletPoints="[
-        'To be added',
-        'To be added',
-        'To be added',
+        'Campus Maps team 🗺️📍',
+        'Documentation lead and backend developer',
       ]"
       websiteUrl="https://epics.engineering.asu.edu/"
     />
@@ -45,31 +43,11 @@ import JobCard from '@/components/JobCard.vue'
       location="Tempe, AZ"
       :technologies="['Vue.js', 'JavaScript', 'Node.js', 'Express.js', 'MongoDB']"
       :bulletPoints="[
-        'Selected as the top-performing team to present project outcomes at a company-wide event, showcasing the\n'+
-        'messaging platform to an audience of over 100 attendees including industry professionals',
-        'Developed the Vue chat interface for an all-in-one messaging platform, enabling users to send and receive messages\n'+
-        'across multiple platforms through a single web client',
-        'Deployed REST API message endpoints using ExpressJS and NodeJS, allowing for secure message retrieval and\n'+
-        'processing',
-        'Implemented a MongoDB database schema to efficiently store and retrieve user session data and messages,\n'+
-        'optimizing query performance and enabling real-time message synchronization across platforms'
+        'Architected Vue.js chat interface with WebSocket integration for real-time cross-platform message synchronization across Instagram and WhatsApp',
+        'DBuilt and deployed REST API endpoints with Express and Node for secure message processing and retrieval',
+        'Recognized as top-performing intern, presenting project to 100+ industry professionals at company showcase'
       ]"
       websiteUrl="https://thesoda.io/mentorship"
-    />
-    <JobCard
-      logo="/assets/Arizona_State_University_logo-cropped.svg"
-      company="Arizona State University"
-      role="Safety Escort Associate"
-      startDate="Sep. 2024"
-      endDate="Present"
-      location="Tempe, AZ"
-      :bulletPoints="[
-        'Provide safe transportation services across campus while maintaining detailed digital records of routes, pick-up/drop-off times, and passenger data through Google Sheets',
-        'Monitor and respond to incoming safety-related communications through LiveSafe dashboard, ensuring prompt assistance to campus community members',
-        'Coordinate real-time transportation logistics while maintaining clear communication with dispatchers and passengers to optimize response times and service efficiency'
-      ]"
-      :technologies="['Python', 'Selenium', 'Google Sheets API']"
-      websiteUrl="https://www.asu.edu/"
     />
     <JobCard
       logo="/assets/banner.svg"
@@ -79,30 +57,12 @@ import JobCard from '@/components/JobCard.vue'
       endDate="May 2023"
       location="Surprise, AZ"
       :bulletPoints="[
-        'Improved automation efficiency for healthcare workflows, resulting in a 25% reduction in manual data entry errors\n'+
-        'through the implementation of 5 new RPA processes',
-        'Accelerated bot development cycles by 40%, reducing average project delivery time from 4 weeks to 2.5 weeks by\n'+
-        'architecting reusable backend script templates and standardized schemas in BluePrism',
-        'Enhanced cross-team collaboration and knowledge sharing by creating comprehensive documentation for RPA\n'+
-        'solutions, including process design documents and user guides, facilitating smooth handovers to operations teams'
+          'Minimized manual data entry errors by 25\\% by automating healthcare workflows using BluePrism',
+          'Cut development time from 3 to 1.5 weeks by creating reusable BluePrism templates and schemas',
+          'Built comprehensive RPA documentation enabling seamless operations team handoffs'
       ]"
       :technologies="['BluePrism', 'Python', 'RPA']"
       websiteUrl="https://www.bannerhealth.com/"
-    />
-    <JobCard
-      logo="/assets/dysart.svg"
-      company="Dysart Schools"
-      role="Computer Systems Maintenance Assistant"
-      startDate="Jan. 2023"
-      endDate="Apr. 2023"
-      location="Surprise, AZ"
-      :bulletPoints="[
-        'Diagnosed and repaired aging computers to enhance performance, utilizing systematic troubleshooting methods and research to resolve complex technical issues',
-        'Collaborated on district-wide initiative to repair and maintain school-issued Chromebooks, ensuring optimal functionality for educational use',
-        'Managed inventory of PC components, including organizing new shipments and maintaining stock levels for future computer assembly projects'
-      ]"
-      :technologies="['IT', 'Operating Systems', 'Hardware']"
-      websiteUrl="https://dysart.org/mainsite"
     />
     </div>
   </section>
