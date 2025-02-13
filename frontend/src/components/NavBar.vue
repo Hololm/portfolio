@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-let sendContact = () => {
+const sendContact = () => {
   window.location.href = 'mailto:joseph.holm27@gmail.com';
 }
 
