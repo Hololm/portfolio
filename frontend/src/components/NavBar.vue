@@ -1,3 +1,17 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+
+let sendContact = () => {
+  window.location.href = 'mailto:joseph.holm27@gmail.com';
+}
+
+const openResume = () => {
+  window.open('/Joseph_Holm_Resume.pdf', '_blank');
+}
+
+const visible = ref(true)
+</script>
+
 <template>
   <nav class="navbar" :class="{ hidden: !visible }">
     <!-- Left Icons -->
