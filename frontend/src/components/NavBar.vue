@@ -1,51 +1,23 @@
-<script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
-
-const lastScroll = ref(0)
-const visible = ref(true)
-
-const handleScroll = () => {
-  const currentScroll = window.pageYOffset
-  visible.value = currentScroll <= lastScroll.value || currentScroll < 100
-  lastScroll.value = currentScroll
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
-
-const openResume = () => {
-  window.open('/Joseph_Holm_Resume.pdf', '_blank')
-}
-
-const sendContact = () => {
-  window.location.href = 'mailto:joseph.holm27@gmail.com'
-}
-</script>
-
 <template>
   <nav class="navbar" :class="{ hidden: !visible }">
-    <div class="nav-container">
-      <div class="nav-group left">
-        <button @click="sendContact" class="nav-button" title="Contact">
-          <i class="icon email-icon"></i>
-        </button>
-        <button @click="openResume" class="nav-button" title="Resume">
-          <i class="icon resume-icon"></i>
-        </button>
-      </div>
-      <div class="nav-group right">
-        <a href="https://github.com/Hololm" target="_blank" class="nav-button">
-          <i class="icon github-icon"></i>
-        </a>
-        <a href="https://linkedin.com/in/joseph-holm" target="_blank" class="nav-button">
-          <i class="icon linkedin-icon"></i>
-        </a>
-      </div>
+    <!-- Left Icons -->
+    <div class="nav-group left">
+      <button @click="sendContact" class="nav-button" title="Contact">
+        <i class="icon email-icon"></i>
+      </button>
+      <button @click="openResume" class="nav-button" title="Resume">
+        <i class="icon resume-icon"></i>
+      </button>
+    </div>
+
+    <!-- Right Icons -->
+    <div class="nav-group right">
+      <a href="https://github.com/Hololm" target="_blank" class="nav-button">
+        <i class="icon github-icon"></i>
+      </a>
+      <a href="https://linkedin.com/in/joseph-holm" target="_blank" class="nav-button">
+        <i class="icon linkedin-icon"></i>
+      </a>
     </div>
   </nav>
 </template>
@@ -53,50 +25,49 @@ const sendContact = () => {
 <style scoped>
 .navbar {
   position: fixed;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 1.5rem;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  width: 90%;
-  max-width: 300px; /* Changed from 600px to 500px */
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar.hidden {
-  transform: translate(-50%, -120%);
-}
-
-.nav-container {
-  background: rgba(30, 30, 30, 0.95);
-  backdrop-filter: blur(12px);
-  border-radius: 30px;
-  padding: 0.5rem 1.5rem; /* Reduced horizontal padding */
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: space-between;
+  transform: translateY(-150%);
 }
 
 .nav-group {
+  position: absolute;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.25rem;
+}
+
+.nav-group.left {
+  left: 2rem;
+}
+
+.nav-group.right {
+  right: 2rem;
 }
 
 .nav-button {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(12px);
   display: grid;
   place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: none;
   cursor: pointer;
 }
 
 .nav-button:hover {
   background: #4ECDC4;
   transform: scale(1.1);
+  border-color: transparent;
 }
 
 .icon {
@@ -105,10 +76,32 @@ const sendContact = () => {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  filter: brightness(0) invert(1);
 }
 
-/* White icons with cyan hover */
+@media (max-width: 768px) {
+  .nav-group {
+    gap: 1rem;
+  }
+
+  .nav-group.left {
+    left: 1rem;
+  }
+
+  .nav-group.right {
+    right: 1rem;
+  }
+
+  .nav-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 .email-icon {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>');
 }
@@ -123,32 +116,5 @@ const sendContact = () => {
 
 .linkedin-icon {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>');
-}
-
-@media (max-width: 768px) {
-  .nav-container {
-    padding: 0.5rem 1rem;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    width: 90%;
-    max-width: 250px; /* Changed from 600px to 500px */
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .nav-group {
-    gap: 1rem;
-  }
-
-  .nav-button {
-    width: 36px;
-    height: 36px;
-  }
-
-  .icon {
-    width: 20px;
-    height: 20px;
-  }
 }
 </style>

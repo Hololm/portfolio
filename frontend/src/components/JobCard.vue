@@ -193,9 +193,13 @@ const openWork = (website: string, event: Event) => {
 
 @media (max-width: 768px) {
   .job-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto; /* Single-column layout */
+    width: calc(100% - 2rem); /* Adjust width for padding */
     padding: 1.5rem;
     gap: 1.5rem;
+    max-width: unset; /* Remove width constraints for responsiveness */
+    margin-left: auto;
+    margin-right: auto; /* Center align on small screens */
   }
 
   .timeline {
