@@ -13,7 +13,7 @@ import JobCard from '@/components/JobCard.vue'
       startDate="Jun. 2025"
       endDate="Aug. 2025"
       location="San Francisco Bay Area, CA"
-      :technologies="['Node.js']"
+      :technologies="['Node.js', 'Python', 'Salesforce', 'AWS']"
       :bulletPoints="[
         'Incoming summer 2025 ☀️',
         'Platform team 🚀'
@@ -29,15 +29,16 @@ import JobCard from '@/components/JobCard.vue'
       location="Tempe, AZ"
       :technologies="['React Native', 'FastAPI', 'TypeScript', 'Python', 'PostgreSQL', 'AWS']"
       :bulletPoints="[
-        'Campus Maps team 🗺️📍',
-        'Documentation lead and backend developer',
+        'Documentation lead for the team, contributing to backend infrastructure of campus navigation app',
+        'Optimized FastAPI endpoints to deliver 25+ campus amenities data in <80ms via Axios fetch calls',
+        'Enforced code docs standards via GitHub PR reviews, accelerating team efficiency and organization'
       ]"
       websiteUrl="https://epics.engineering.asu.edu/"
     />
     <JobCard
       logo="/assets/soda.svg"
       company="The Software Developer's Association"
-      role="Software Development Intern"
+      role="Software Development Engineering Intern"
       startDate="Oct. 2024"
       endDate="Present"
       location="Tempe, AZ"
