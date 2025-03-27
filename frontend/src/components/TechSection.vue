@@ -78,8 +78,8 @@
               <span>Express.js</span>
             </div>
             <div class="tech-item">
-              <img src="/assets/next.svg" alt="Next" class="tech-icon"/>
-              <span>Next.js</span>
+              <img src="/assets/tailwind.svg" alt="Next" class="tech-icon"/>
+              <span>Tailwind</span>
             </div>
             <div class="tech-item">
               <img src="/assets/vite.svg" alt="Vite" class="tech-icon"/>
@@ -96,7 +96,7 @@
           <div class="tech-column">
             <div class="tech-item">
               <img src="/assets/mongodb.svg" alt="MongoDB" class="tech-icon"/>
-              <span>NoSQL</span>
+              <span>MongoDB</span>
             </div>
             <div class="tech-item">
               <img src="/assets/selenium.svg" alt="Selenium" class="tech-icon"/>
@@ -121,8 +121,8 @@
               <span>Git</span>
             </div>
             <div class="tech-item">
-              <img src="/assets/jenkins.svg" alt="Jenkins" class="tech-icon"/>
-              <span>Jenkins</span>
+              <img src="/assets/aws.svg" alt="Jenkins" class="tech-icon"/>
+              <span>AWS</span>
             </div>
             <div class="tech-item">
               <img src="/assets/docker.svg" alt="Docker" class="tech-icon"/>
